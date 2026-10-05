@@ -1,0 +1,2193 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F7EFE0">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1B1610">
+<meta name="apple-mobile-web-app-title" content="A tavola">
+<title>A tavola</title>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233F5E2A'/%3E%3Ccircle cx='32' cy='33' r='16' fill='%23F6F7F1'/%3E%3Ccircle cx='32' cy='34' r='6' fill='%23C8412E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#F7EFE0; --surface:#FFFBF3; --surface-2:#FFF6E7; --ink:#2E2118; --muted:#7B6857; --line:#E7D8C2;
+  --accent:#3E6B33; --accent-ink:#FFF9EC; --accent-soft:#E3EBD6;
+  --warn-bg:#FBE6C4; --warn-ink:#6B4210;
+  --p-l:#C0402C; --p-m:#8A4A78; --p-a:#2E6D93; --p-v:#C98512; --p-q:#8C7B68;
+  --r-lg:26px; --r-md:16px;
+  --ombra:0 1px 0 rgba(94,62,28,.05), 0 14px 28px -22px rgba(94,62,28,.55);
+  --trama:radial-gradient(rgba(139,106,60,.07) 1px, transparent 1px);
+  --font:"Atkinson Hyperlegible", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --display:"Fraunces", "Iowan Old Style", Palatino, Georgia, serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top, 0px);
+  padding-bottom:env(safe-area-inset-bottom, 0px);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:#1B1610; --surface:#262019; --surface-2:#2C241B; --ink:#F3E8D7; --muted:#B3A28C; --line:#3C3226;
+    --accent:#9CC47E; --accent-ink:#1A2113; --accent-soft:#333D28;
+    --warn-bg:#3E2F14; --warn-ink:#F3D49B;
+    --p-l:#EE8B72; --p-m:#D296C4; --p-a:#79B4D8; --p-v:#EBB958; --p-q:#BCAB95;
+    --ombra:0 14px 30px -24px rgba(0,0,0,.9);
+    --trama:radial-gradient(rgba(255,229,190,.035) 1px, transparent 1px);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg:#1B1610; --surface:#262019; --surface-2:#2C241B; --ink:#F3E8D7; --muted:#B3A28C; --line:#3C3226;
+  --accent:#9CC47E; --accent-ink:#1A2113; --accent-soft:#333D28;
+  --warn-bg:#3E2F14; --warn-ink:#F3D49B;
+  --p-l:#EE8B72; --p-m:#D296C4; --p-a:#79B4D8; --p-v:#EBB958; --p-q:#BCAB95;
+  --ombra:0 14px 30px -24px rgba(0,0,0,.9);
+  --trama:radial-gradient(rgba(255,229,190,.035) 1px, transparent 1px);
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: inherit; }
+html { scroll-padding-top: env(safe-area-inset-top, 0px); -webkit-text-size-adjust:100%; }
+html, body { max-width:100%; overflow-x:clip; overscroll-behavior-x:none; }
+body { margin:0; background-color:var(--bg); background-image:var(--trama); background-size:15px 15px; color:var(--ink); font-family:var(--font); font-size:18px; line-height:1.45; overflow-wrap:break-word; }
+main, .card, .cena, .reparto, section, ul, li, p, h1, h2, h3 { min-width:0; }
+body.bloccato { overflow:hidden; }
+button, input, select { font:inherit; color:inherit; }
+button { cursor:pointer; }
+:focus-visible { outline:3px solid var(--accent); outline-offset:2px; border-radius:8px; }
+h1, h2, h3 { margin:0; line-height:1.15; font-family:var(--display); font-weight:600; letter-spacing:-.01em; }
+p { margin:0; }
+ul { margin:0; padding:0; list-style:none; }
+.sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+svg { width:24px; height:24px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+
+/* barra in alto */
+.appbar { position:sticky; top:env(safe-area-inset-top, 0px); z-index:5; background:var(--bg); padding:14px 18px 10px; }
+.appbar h1 { font-size:30px; font-weight:700; letter-spacing:-.015em; }
+.appbar p { color:var(--muted); font-size:16px; }
+
+main { max-width:640px; margin:0 auto; padding:4px 14px 120px; width:100%; }
+main > * + * { margin-top:14px; }
+
+/* barra delle schede */
+.tabbar { position:fixed; left:0; right:0; bottom:0; z-index:6; background:var(--surface); border-top:1px solid var(--line); box-shadow:0 -10px 24px -20px rgba(94,62,28,.7);
+  display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); padding:6px 4px calc(6px + env(safe-area-inset-bottom, 0px)); }
+.tab { background:none; border:0; display:flex; flex-direction:column; align-items:center; gap:2px; padding:6px 2px; min-height:56px; color:var(--muted); font-size:14px; border-radius:12px; min-width:0; overflow:hidden; }
+.tab svg { width:26px; height:26px; }
+.tab.on { color:var(--accent); font-weight:700; }
+.tab.spesa-tab.on svg, .tab.spesa-tab svg { stroke-width:2.2; }
+
+/* elementi comuni */
+.card { background:var(--surface); border-radius:var(--r-lg); padding:18px; box-shadow:var(--ombra); }
+.card h2 { font-size:24px; margin-bottom:8px; }
+.card h3 { font-size:21px; }
+.hint { color:var(--muted); font-size:16px; margin-top:8px; }
+.kicker { color:var(--muted); font-size:16px; }
+.btn { display:block; width:100%; min-height:54px; border-radius:999px; border:2px solid var(--accent); background:transparent; color:var(--accent); font-weight:700; font-size:18px; padding:10px 14px; }
+.btn.primary { background:var(--accent); color:var(--accent-ink); }
+.btn.ghost { border-color:var(--line); color:var(--ink); font-weight:400; }
+.btn.small { display:inline-block; width:auto; min-height:44px; padding:6px 16px; font-size:17px; }
+.link { background:none; border:0; color:var(--accent); font-weight:700; padding:8px 0 0; min-height:40px; text-align:left; font-size:16px; }
+.azioni { display:grid; gap:10px; margin-top:14px; }
+.dot { display:inline-block; width:12px; height:12px; border-radius:50%; flex:none; margin-right:8px; vertical-align:middle; }
+.dot.big { width:18px; height:18px; }
+.seg { display:flex; background:var(--bg); border-radius:999px; padding:4px; gap:4px; margin-top:12px; }
+.seg button { flex:1 1 0; min-width:0; border:0; background:none; border-radius:999px; min-height:48px; padding:6px 6px; font-size:16px; color:var(--muted); }
+.seg button.on { background:var(--surface); color:var(--ink); font-weight:700; box-shadow:0 1px 4px rgba(94,62,28,.22); }
+.seg.wide { background:var(--surface); margin-top:0; }
+.seg.wide button.on { background:var(--accent-soft); box-shadow:none; }
+.seg.small button { font-size:15px; }
+.chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+.chip { border:1.5px solid var(--line); background:var(--surface); border-radius:999px; min-height:44px; padding:6px 14px; font-size:16px; }
+.chip.on { background:var(--accent); border-color:var(--accent); color:var(--accent-ink); font-weight:700; }
+.avviso, .banner { background:var(--warn-bg); color:var(--warn-ink); border-radius:var(--r-md); padding:14px; font-size:16px; }
+.avviso .btn, .banner .btn { margin-top:10px; }
+.avviso .seg { background:rgba(255,255,255,.45); }
+.banner .btn.primary { background:var(--warn-ink); border-color:var(--warn-ink); color:var(--warn-bg); }
+
+/* giorni */
+.daystrip { display:grid; grid-template-columns:repeat(7, minmax(0, 1fr)); gap:5px; }
+.daychip { border:0; background:var(--surface); border-radius:18px; box-shadow:var(--ombra); min-height:66px; padding:6px 0; display:flex; flex-direction:column; align-items:center; justify-content:center; font-size:14px; color:var(--muted); position:relative; }
+.daychip b { font-size:21px; color:var(--ink); }
+.daychip i { position:absolute; bottom:6px; width:6px; height:6px; border-radius:50%; background:var(--p-l); }
+.daychip.on i { background:var(--accent-ink); }
+.daychip.on { background:var(--accent); color:var(--accent-ink); }
+.daychip.on b { color:var(--accent-ink); }
+
+/* cena: il pezzo forte */
+.cena { background:var(--surface-2); border-radius:var(--r-lg); padding:0 18px 18px; overflow:hidden; box-shadow:var(--ombra); }
+.tavola { display:flex; height:12px; margin:0 -18px 16px; }
+.tavola span { flex:1; }
+.piatto { font-size:34px; font-weight:700; letter-spacing:-.02em; margin-top:4px; }
+.porzioni { margin-top:14px; }
+.porzioni li { display:flex; align-items:flex-start; gap:4px; padding:12px 0; border-top:1px solid var(--line); }
+.porzioni li .dot { margin-top:7px; }
+.porzioni li div { display:flex; flex-direction:column; min-width:0; }
+.porzioni li span { color:var(--muted); font-size:16px; }
+.porzioni li .nota { color:var(--ink); font-size:16px; font-style:italic; }
+.dividi { margin-top:14px; background:var(--accent-soft); border-radius:var(--r-md); padding:14px; }
+.dividi h3 { font-size:19px; margin-bottom:6px; }
+.dividi p + .righe { margin-top:6px; }
+.righe li { display:flex; align-items:center; padding:4px 0; font-size:17px; }
+.righe li b { margin-left:auto; }
+.insieme h3 { margin-bottom:6px; }
+.insieme p { margin-top:6px; }
+
+/* card persona */
+.persona { border-left:8px solid var(--pc); }
+.persona header h3, .risultato header h3 { font-weight:700; }
+.persona header, .risultato header { display:flex; align-items:center; gap:2px; flex-wrap:wrap; }
+.persona header h3 { margin-right:auto; min-width:0; }
+.badge { font-size:15px; background:var(--bg); border-radius:999px; padding:6px 12px; border:0; display:inline-flex; align-items:center; gap:4px; min-height:36px; }
+.btnbadge { border:1.5px solid var(--line); background:var(--surface); min-height:44px; }
+.btnbadge svg { width:18px; height:18px; }
+.nota-prof { color:var(--muted); font-size:15px; margin-top:6px; }
+.pasti li { display:grid; grid-template-columns:92px minmax(0, 1fr); gap:8px; padding:12px 0; border-top:1px solid var(--line); }
+.pasti li:first-child { border-top:0; margin-top:6px; }
+.pasto { color:var(--muted); font-size:15px; padding-top:2px; }
+.pasti li div { display:flex; flex-direction:column; align-items:flex-start; min-width:0; }
+.pasti li div span { color:var(--muted); font-size:16px; }
+.pasti li div .idea { font-style:italic; margin-top:2px; }
+.pasti li.vuoto div span { color:var(--ink); }
+.pasti li.vuoto .btn { margin-top:8px; }
+.pasti li.libero b { font-weight:400; font-style:italic; }
+
+/* settimana */
+.hero-sett .big { font-size:30px; font-weight:700; font-family:var(--display); }
+.conta, .daychip b, .sw-fine h2 { font-family:var(--display); }
+.bar { height:12px; background:var(--bg); border-radius:999px; overflow:hidden; margin-top:8px; }
+.bar span { display:block; height:100%; background:var(--accent); border-radius:999px; }
+.stato-persone { margin-top:12px; }
+.stato-persone li { display:flex; align-items:center; padding:4px 0; }
+.stato-persone b { margin-left:auto; }
+.agenda { margin-top:10px; }
+.ag-row { display:grid; grid-template-columns:40px repeat(3, minmax(0, 1fr)); gap:5px; align-items:center; margin-top:6px; }
+.ag-row.head span { font-size:15px; color:var(--muted); display:flex; align-items:center; justify-content:center; }
+.ag-row.head .dot { width:10px; height:10px; margin-right:5px; }
+.ag-g { font-size:16px; color:var(--muted); }
+.ag { border:0; border-radius:12px; min-height:52px; font-size:15px; padding:4px; text-align:center; display:flex; align-items:center; justify-content:center; line-height:1.15; }
+.c-rest, .c-medi { background:var(--bg); color:var(--muted); }
+.c-corta, .c-sport { background:color-mix(in srgb, var(--p-a) 22%, var(--surface)); color:var(--ink); }
+.c-lunga { background:var(--p-a); color:#fff; font-weight:700; }
+.ag.v.c-sport { background:color-mix(in srgb, var(--p-v) 28%, var(--surface)); }
+.c-low { background:color-mix(in srgb, var(--p-m) 22%, var(--surface)); color:var(--ink); }
+.c-libera { background:transparent; color:var(--muted); font-style:italic; }
+.cene-sett li + li { border-top:1px solid var(--line); }
+.riga { width:100%; display:flex; align-items:center; gap:12px; background:none; border:0; min-height:54px; text-align:left; padding:6px 0; }
+.riga .g { color:var(--muted); width:40px; font-size:16px; }
+.riga svg { margin-left:auto; color:var(--muted); flex:none; }
+.riga-imp { display:flex; align-items:center; gap:14px; padding:12px 0; border-top:1px solid var(--line); }
+.riga-imp:first-of-type { border-top:0; }
+.riga-imp span { flex:1; min-width:0; }
+.riga-imp input { width:28px; height:28px; accent-color:var(--accent); flex:none; }
+.campo { display:flex; flex-direction:column; gap:4px; margin:6px 0 12px; font-size:16px; color:var(--muted); }
+.campo input, .campo select { min-height:50px; border:1.5px solid var(--line); border-radius:12px; padding:8px 12px; background:var(--surface); color:var(--ink); font-size:18px; width:100%; }
+.card > .btn.ghost { margin-top:8px; }
+
+/* spesa */
+.conta { font-weight:700; font-size:21px; padding:0 4px; }
+.reparto { background:var(--surface); border-radius:var(--r-lg); padding:6px 16px 8px; box-shadow:var(--ombra); }
+.reparto h3, .reparto summary { font-size:18px; color:var(--muted); padding:10px 0 4px; font-weight:700; }
+.reparto summary { cursor:pointer; min-height:44px; }
+.reparto li { display:flex; align-items:center; gap:12px; padding:8px 0; border-top:1px solid var(--line); min-height:60px; }
+.reparto li:first-child { border-top:0; }
+.check { width:34px; height:34px; border-radius:50%; border:2.5px solid var(--muted); background:none; flex:none; position:relative; }
+.check[aria-checked="true"] { background:var(--accent); border-color:var(--accent); }
+.check[aria-checked="true"]::after { content:""; position:absolute; left:10px; top:4px; width:8px; height:15px; border:solid #fff; border-width:0 3px 3px 0; transform:rotate(45deg); }
+.sp-testo { flex:1; min-width:0; display:flex; flex-direction:column; }
+.sp-testo span { color:var(--muted); font-size:16px; }
+.sp-testo > span { display:flex; align-items:center; flex-wrap:wrap; }
+.sp-testo .chi { margin-left:10px; display:inline-flex; }
+.sp-testo .chi .dot { width:9px; height:9px; margin-right:3px; }
+.legenda { display:flex; flex-wrap:wrap; gap:4px 14px; color:var(--muted); font-size:15px; padding:0 4px; }
+.legenda span { display:inline-flex; align-items:center; }
+.legenda .dot { width:10px; height:10px; margin-right:5px; }
+.reparto li.fatto .sp-testo b { text-decoration:line-through; color:var(--muted); font-weight:400; }
+.reparto li .link { padding:0; min-height:44px; flex:none; }
+
+/* cerca */
+.cerca { display:flex; align-items:center; gap:10px; background:var(--surface); border-radius:var(--r-lg); padding:6px 16px; border:2px solid var(--line); box-shadow:var(--ombra); }
+.cerca:focus-within { border-color:var(--accent); }
+.cerca svg { color:var(--muted); flex:none; }
+.cerca input { flex:1; min-width:0; width:100%; border:0; background:none; min-height:54px; font-size:20px; outline:none; }
+.risultato { border-left:8px solid var(--pc); }
+.risultato li { padding:10px 0; border-top:1px solid var(--line); display:flex; flex-direction:column; }
+.risultato li:first-child { border-top:0; margin-top:6px; }
+.dove { color:var(--muted); font-size:15px; }
+.risultato li b + b { margin-top:2px; }
+
+/* ricette */
+.ricetta h3 { margin:2px 0 6px; }
+.ricetta p + p { margin-top:8px; }
+.fav { color:var(--accent); font-weight:700; font-size:16px; }
+.chi-va { color:var(--muted); font-size:16px; }
+.conv { display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr); gap:10px; }
+.regole li { padding:8px 0 8px 18px; position:relative; border-top:1px solid var(--line); }
+.regole li:first-child { border-top:0; }
+.regole li::before { content:""; position:absolute; left:2px; top:18px; width:6px; height:6px; border-radius:50%; background:var(--accent); }
+
+/* foglio di scelta */
+#sheet { position:fixed; inset:0; z-index:20; background:rgba(8,16,24,.45); display:none; align-items:flex-end; justify-content:center; }
+#sheet.on { display:flex; }
+.sheet-box { background:var(--surface); width:100%; max-width:640px; border-radius:24px 24px 0 0; padding:20px 16px calc(16px + env(safe-area-inset-bottom, 0px)); display:grid; gap:10px; }
+.sheet-box h2 { font-size:22px; margin-bottom:4px; }
+.opt { text-align:left; border:2px solid var(--line); background:var(--surface); border-radius:var(--r-md); min-height:60px; padding:10px 14px; display:flex; flex-direction:column; }
+.opt span { color:var(--muted); font-size:15px; }
+.opt.on { border-color:var(--accent); background:var(--accent-soft); }
+
+/* swipe */
+#swipe { position:fixed; inset:0; z-index:30; overflow:hidden; background:var(--bg); display:none; flex-direction:column; padding:calc(10px + env(safe-area-inset-top, 0px)) 16px calc(16px + env(safe-area-inset-bottom, 0px)); }
+#swipe.on { display:flex; }
+#componi { position:fixed; inset:0; z-index:31; overflow-y:auto; background:var(--bg); display:none; padding:calc(10px + env(safe-area-inset-top, 0px)) 16px calc(20px + env(safe-area-inset-bottom, 0px)); }
+#componi.on { display:block; }
+.cp-box { max-width:560px; margin:0 auto; }
+.cp-top { display:flex; align-items:center; justify-content:space-between; gap:10px; color:var(--muted); }
+.cp-top .btn { width:auto; min-height:44px; }
+.cp-chi { display:flex; align-items:center; gap:10px; margin:14px 0 2px; font-size:17px; }
+.cp-gruppo { margin-top:18px; }
+.cp-gruppo h3 { font-size:19px; margin-bottom:8px; }
+.cp-opz { display:flex; flex-wrap:wrap; gap:8px; }
+.cp-opz .chip { display:flex; flex-direction:column; align-items:flex-start; line-height:1.15; padding:8px 14px; }
+.cp-opz .chip small { color:var(--muted); font-size:13px; }
+.cp-opz .chip.on small { color:var(--accent-ink); opacity:.85; }
+.cp-fine { position:sticky; bottom:0; background:linear-gradient(to bottom, transparent, var(--bg) 26%); padding-top:18px; margin-top:22px; }
+.cp-riepilogo { background:var(--surface); border-radius:var(--r-lg); padding:14px 16px; box-shadow:var(--ombra); }
+.cp-riepilogo b { font-size:19px; }
+.cp-riepilogo ul { list-style:none; margin:8px 0 0; padding:0; }
+.cp-riepilogo li { padding:3px 0; color:var(--muted); }
+.sw-top { display:flex; align-items:center; justify-content:space-between; max-width:560px; width:100%; margin:0 auto; color:var(--muted); }
+.sw-top .btn { width:auto; min-height:44px; }
+.sw-area { flex:1; display:flex; align-items:center; justify-content:center; padding:12px 0; min-height:0; }
+.sw-card { position:relative; width:100%; max-width:520px; max-height:100%; overflow:auto; background:linear-gradient(var(--pc), var(--pc)) top / 100% 14px no-repeat, var(--surface); border-radius:30px; padding:30px 22px 26px; touch-action:pan-y; user-select:none; -webkit-user-select:none; box-shadow:0 14px 34px -14px rgba(94,62,28,.45); }
+.sw-chi { display:flex; align-items:center; font-size:20px; }
+.sw-quando { color:var(--muted); font-size:16px; margin-top:4px; }
+.sw-card h2 { font-size:28px; margin:14px 0 12px; letter-spacing:-.01em; }
+.sw-card ul li { padding:8px 0; border-top:1px solid var(--line); font-size:18px; }
+.sw-avviso { margin-top:12px; background:var(--warn-bg); color:var(--warn-ink); padding:10px 12px; border-radius:12px; font-size:16px; }
+.sw-stamp { position:absolute; top:28px; padding:4px 12px; border:3px solid; border-radius:10px; font-weight:700; font-size:22px; opacity:0; transition:opacity .15s; }
+.sw-stamp.si { right:18px; color:var(--accent); }
+.sw-stamp.no { left:18px; color:var(--p-l); }
+.sw-card.tira-si .sw-stamp.si, .sw-card.tira-no .sw-stamp.no { opacity:1; }
+.sw-btns { display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 1fr); gap:12px; max-width:520px; width:100%; margin:0 auto; }
+.sw-b { min-height:72px; border-radius:22px; border:0; display:flex; align-items:center; justify-content:center; gap:10px; font-size:20px; font-weight:700; }
+.sw-b svg { width:30px; height:30px; stroke-width:2.6; }
+.sw-b.no { background:var(--surface); color:var(--ink); border:2px solid var(--line); }
+.sw-b.si { background:var(--accent); color:var(--accent-ink); }
+.sw-tutta { max-width:520px; margin:10px auto 0; }
+.sw-fine { margin:auto; max-width:460px; text-align:center; display:grid; gap:14px; }
+.sw-fine h2 { font-size:34px; }
+
+#toast { position:fixed; left:50%; bottom:calc(92px + env(safe-area-inset-bottom, 0px)); transform:translate(-50%, 20px); background:var(--ink); color:var(--surface); padding:12px 18px; border-radius:14px; font-size:17px; opacity:0; pointer-events:none; transition:opacity .2s, transform .2s; z-index:40; max-width:90vw; text-align:center; }
+#toast.on { opacity:1; transform:translate(-50%, 0); }
+
+.scelta-cena { margin-top:12px; }
+.appbar-riga { display:flex; align-items:flex-start; justify-content:space-between; gap:10px; }
+.appbar-tit { min-width:0; }
+.appbar-az { display:flex; gap:8px; flex:0 0 auto; padding-top:2px; }
+.icona { width:46px; height:46px; border-radius:50%; border:1px solid var(--line); background:var(--surface); color:var(--ink); display:grid; place-items:center; box-shadow:var(--ombra); }
+.icona svg { width:22px; height:22px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.icona.on { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+details.persona { padding:0; }
+details.persona > summary { list-style:none; display:flex; align-items:center; gap:12px; padding:16px 18px; cursor:pointer; }
+details.persona > summary::-webkit-details-marker { display:none; }
+details.persona .pn { flex:1; min-width:0; }
+details.persona .pn b { display:block; font-size:19px; }
+details.persona .pn small { display:block; color:var(--muted); font-size:15px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+details.persona .chev { width:20px; height:20px; flex:0 0 auto; fill:none; stroke:var(--muted); stroke-width:2; stroke-linecap:round; transition:transform .2s; }
+details.persona[open] .chev { transform:rotate(180deg); }
+.persona-corpo { padding:0 18px 14px; }
+.riga-prof { display:flex; align-items:center; gap:10px; color:var(--muted); font-size:16px; margin:0 0 6px; }
+.adesso { border-left:8px solid var(--accent); }
+.adesso h2 { font-size:26px; margin-bottom:6px; }
+.pasti li.saltato div b, .porzioni li.saltato div b { text-decoration:line-through; }
+.pasti li.saltato, .porzioni li.saltato { color:var(--muted); }
+.azioni-pasto { display:flex; flex-wrap:wrap; gap:4px 14px; margin-top:2px; }
+.sposta { margin-top:12px; }
+.blocco-cons { margin-top:18px; }
+.aggiungi { display:flex; gap:8px; align-items:center; margin:8px 0 6px; }
+.aggiungi input { flex:1; min-width:0; border:1.5px solid var(--line); background:var(--bg); color:var(--ink); font-family:var(--font); font-size:17px; border-radius:14px; min-height:48px; padding:6px 14px; }
+.aggiungi input:focus { outline:2px solid var(--accent); outline-offset:1px; }
+.aggiungi .btn { width:auto; flex:0 0 auto; min-height:48px; padding:6px 18px; }
+.lista-libera { margin-top:18px; }
+.lista-libera .hint { margin:2px 0 6px; }
+.btn.file { position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; cursor:pointer; }
+.btn.file input { position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:pointer; }
+.dieta-riga { display:flex; align-items:center; gap:10px; padding:12px 0; border-top:1px solid var(--line); }
+.dieta-riga div { flex:1; min-width:0; }
+.dieta-riga small { display:block; color:var(--muted); font-size:15px; }
+details.mini { margin-top:10px; }
+details.mini summary { color:var(--muted); font-size:16px; padding:10px 0; cursor:pointer; }
+details.mini p { font-size:15px; color:var(--muted); margin:8px 0; }
+details.mini pre { font-size:13px; background:var(--bg); border-radius:12px; padding:10px 12px; overflow-x:auto; margin:8px 0; }
+.chips.piccole { margin:2px 0 10px; gap:6px; }
+.chips.piccole .chip { min-height:40px; padding:4px 12px; font-size:15px; }
+.cene-sett li { padding-bottom:4px; }
+
+@media (max-width:380px) {
+  body { font-size:17px; }
+  main { padding-left:10px; padding-right:10px; }
+  .card, .cena { padding-left:14px; padding-right:14px; }
+  .tavola { margin-left:-14px; margin-right:-14px; }
+  .appbar { padding-left:14px; padding-right:14px; }
+  .appbar h1 { font-size:26px; }
+  .piatto { font-size:26px; }
+  .pasti li { grid-template-columns:78px minmax(0, 1fr); gap:6px; }
+  .pasto { font-size:14px; }
+  .daychip { min-height:58px; font-size:13px; }
+  .daychip b { font-size:19px; }
+  .ag { font-size:13px; min-height:48px; }
+  .ag-row { grid-template-columns:32px repeat(3, minmax(0, 1fr)); gap:4px; }
+  .tab { font-size:12px; }
+  .chip { font-size:15px; padding:6px 12px; }
+  .reparto { padding-left:12px; padding-right:12px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition:none !important; } }
+@media (min-width:700px) { .appbar { max-width:640px; margin:0 auto; } }
+</style>
+</head>
+<body>
+<header class="appbar"><div class="appbar-riga">
+  <div class="appbar-tit"><h1 id="titolo">Oggi</h1><p id="sottotitolo"></p></div>
+  <div class="appbar-az">
+    <button class="icona" data-act="vai" data-v="cerca" aria-label="Cerca un alimento o una ricetta"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+    <button class="icona" data-act="vai" data-v="impostazioni" aria-label="Impostazioni"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2M6 6l1.5 1.5M16.5 16.5L18 18M18 6l-1.5 1.5M7.5 16.5L6 18"/></svg></button>
+  </div></div></header>
+<main id="view"></main>
+<nav class="tabbar" aria-label="Sezioni">
+  <button class="tab" data-tab="oggi"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/></svg>Oggi</button>
+  <button class="tab" data-tab="settimana"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Settimana</button>
+  <button class="tab spesa-tab" data-tab="spesa"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h16l-1.6 9.2a2 2 0 0 1-2 1.8H7.6a2 2 0 0 1-2-1.8z"/><path d="M8.5 9l3.5-5 3.5 5"/></svg>Spesa</button>
+</nav>
+<div id="sheet"></div>
+<div id="swipe" aria-live="polite"></div>
+<div id="componi" aria-live="polite"></div>
+<div id="toast" role="status"></div>
+<script>
+// ================== CATALOGO ALIMENTI ==================
+// key: [etichetta, reparto, unità ('g' default | 'ml' | 'n' | 'cu' cucchiai), categoria frequenze]
+const REPARTI = {
+  verdura: "Frutta e verdura",
+  carne: "Macelleria",
+  pesce: "Pescheria",
+  formaggi: "Salumi e formaggi",
+  latte: "Latte, uova e yogurt",
+  pane: "Pane e forno",
+  pasta: "Pasta, riso e legumi",
+  surgelati: "Surgelati",
+  dispensa: "Colazione e dispensa"
+};
+const REPARTI_ORDINE = ["verdura","carne","pesce","formaggi","latte","pane","pasta","surgelati","dispensa"];
+
+const F = {
+  cornflakes:["Cornflakes","dispensa"], cornflakes0:["Cornflakes zero zuccheri","dispensa"],
+  avena:["Fiocchi d'avena","dispensa"], fiocchi_riso:["Fiocchi di riso","dispensa"],
+  granola:["Granola","dispensa"], biscotti_int:["Biscotti integrali","dispensa"],
+  biscotti_secchi:["Biscotti secchi tipo Oro Saiwa","dispensa"], biscotti_riso:["Biscotti di riso","dispensa"],
+  muesli:["Muesli","dispensa"], fette_bisc:["Fette biscottate integrali","dispensa","n"],
+  farina_avena:["Farina d'avena","dispensa"], marmellata:["Marmellata poco zuccherata","dispensa"],
+  miele:["Miele","dispensa"], acero:["Sciroppo d'acero","dispensa"], nocciolata:["Nocciolata","dispensa"],
+  burro_arachidi:["Burro d'arachidi","dispensa"], cioccolato:["Cioccolato fondente 75%","dispensa"],
+  frutta_secca:["Frutta secca (mandorle, noci, nocciole)","dispensa"], cocco_dis:["Cocco disidratato","dispensa"],
+  cocco_fresco:["Cocco fresco","verdura"], frutta_dis:["Frutta disidratata","dispensa"],
+  crackers:["Crackers integrali","pane"], lupini:["Lupini","dispensa"], olive:["Olive","dispensa"],
+  avocado:["Avocado","verdura"], olio:["Olio extravergine","dispensa","cu"],
+  pane_int:["Pane integrale","pane"], pane_segale:["Pane di segale","pane"], pane_sc:["Pane senatore Cappelli","pane"],
+  frisa:["Frisa integrale","pane"], wasa:["Wasa","pane"],
+  pizza:["Pizza con verdure (impasto integrale o senatore Cappelli)","pane","n"],
+  latte_ps:["Latte parzialmente scremato","latte","ml"], latte_sl:["Latte senza lattosio","latte","ml"],
+  latte_veg:["Latte vegetale","latte","ml"], yogurt:["Yogurt bianco (vasetto)","latte","n"],
+  yogurt_sl:["Yogurt bianco senza lattosio (vasetto)","latte","n"], yogurt_greco:["Yogurt greco bianco","latte"],
+  kefir:["Kefir","latte","ml"], uova:["Uova","latte","n","uova"], albume:["Albume","latte"],
+  grana:["Grana","formaggi"], philadelphia:["Philadelphia","formaggi","g","latticini"],
+  philadelphia_sl:["Philadelphia senza lattosio","formaggi","g","latticini"],
+  mozzarella:["Mozzarella","formaggi","g","latticini"], mozzarella_sl:["Mozzarella senza lattosio","formaggi","g","latticini"],
+  bufala:["Mozzarella di bufala","formaggi","g","latticini"], giuncata:["Giuncata","formaggi","g","latticini"],
+  ricotta:["Ricotta","formaggi","g","latticini"], ricotta_sl:["Ricotta senza lattosio","formaggi","g","latticini"],
+  cacioricotta:["Cacioricotta","formaggi","g","latticini"], fiocchi_latte:["Fiocchi di latte","formaggi","g","latticini"],
+  stracchino:["Stracchino","formaggi","g","latticini"], robiola:["Robiola","formaggi","g","latticini"],
+  feta:["Feta","formaggi","g","latticini"], primo_sale:["Primo sale","formaggi","g","latticini"],
+  cotto:["Prosciutto cotto","formaggi","g","affettati"], crudo:["Prosciutto crudo magro","formaggi","g","affettati"],
+  bresaola:["Bresaola","formaggi","g","affettati"], speck:["Speck","formaggi","g","affettati"],
+  fesa:["Fesa di tacchino","formaggi","g","affettati"], salmone_aff:["Salmone affumicato","pesce"],
+  pollo:["Petto di pollo","carne","g","bianca"], tacchino:["Petto di tacchino","carne","g","bianca"],
+  hamb_pollo:["Hamburger di pollo","carne","g","bianca"], sals_pollo:["Salsiccia di pollo","carne","g","bianca"],
+  vitello:["Filetto di vitello","carne","g","rossa"], hamb_vitello:["Hamburger di vitello","carne","g","rossa"],
+  sals_vitello:["Salsiccia di vitello","carne","g","rossa"], costata:["Costata di vitello","carne","g","rossa"],
+  lonza:["Lonza di maiale","carne","g","rossa"], cavallo:["Carne di cavallo","carne","g","rossa"],
+  coscette_pollo:["Coscette di pollo senza pelle","carne","g","bianca"], diaframma:["Diaframma di vitello","carne","g","rossa"],
+  arista:["Arista di maiale","carne","g","rossa"],
+  merluzzo:["Merluzzo","pesce","g","pesce"], spigola:["Spigola","pesce","g","pesce"], persico:["Persico","pesce","g","pesce"],
+  orata:["Orata","pesce","g","pesce"], spada:["Pesce spada","pesce","g","pesce"], salmone:["Salmone fresco","pesce","g","pesce"],
+  tonno_fresco:["Tonno fresco","pesce","g","pesce"], polpo:["Polpo","pesce","g","pesce"], seppie:["Seppie","pesce","g","pesce"],
+  calamari:["Calamari","pesce","g","pesce"], gamberetti:["Gamberetti sgusciati","pesce","g","pesce"],
+  cozze:["Cozze o vongole","pesce","g","pesce"], nasello:["Nasello","pesce","g","pesce"], platessa:["Platessa","pesce","g","pesce"],
+  tonno:["Tonno al naturale (in vetro)","dispensa","g","pesce"], salmone_nat:["Salmone al naturale","dispensa","g","pesce"],
+  sgombro:["Sgombro al naturale","dispensa","g","pesce"],
+  pasta_int:["Pasta integrale","pasta","g","pasta"], pasta_sc:["Pasta senatore Cappelli","pasta","g","pasta"],
+  pasta_kamut:["Pasta di kamut","pasta","g","pasta"], pasta_fresca:["Pasta fresca","pasta","g","pasta"],
+  riso_int:["Riso integrale","pasta","g","riso"], riso_basmati:["Riso basmati","pasta","g","riso"],
+  riso_venere:["Riso venere","pasta","g","riso"], riso_rosso:["Riso rosso","pasta","g","riso"],
+  farro:["Farro","pasta","g","cereali"], orzo:["Orzo","pasta","g","cereali"], quinoa:["Quinoa","pasta","g","cereali"],
+  saraceno:["Grano saraceno","pasta","g","cereali"], bulgur:["Bulgur","pasta","g","cereali"], couscous:["Cous cous","pasta","g","cereali"],
+  patate:["Patate","verdura"],
+  lenticchie:["Lenticchie secche","pasta","g","legumi"], ceci:["Ceci secchi","pasta","g","legumi"],
+  fagioli:["Fagioli secchi","pasta","g","legumi"], piselli:["Piselli surgelati","surgelati","g","legumi"]
+};
+
+const FRUTTA_STAGIONE = ["mela","pera","kiwi","melograno","prugne","arancia","mandarini","ananas","cachi","uva"];
+const FRUTTA_LIMITATA = ["banana","cachi","uva","melone","anguria"];
+
+const VERDURE_AMMESSE = "agretti, asparagi, barbabietole rosse, bieta, rape, broccoli, carciofi, carote, catalogna, cavolfiori, verza, cetrioli, cicoria, cipolla, barattiere, fiori di zucca, indivia belga, romanella, lattuga, songino, finocchi, fagiolini, funghi, melanzane, peperoni, pomodori, radicchio, ravanelli, rucola, sedano, spinaci, valeriana, zucca gialla, zucchine";
+
+// ================== PERSONE ==================
+const PERSONE = [
+  {id:"L", nome:"Ludovica", colore:"var(--p-l)"},
+  {id:"M", nome:"Tina", colore:"var(--p-m)"},
+  {id:"A", nome:"Antonio", colore:"var(--p-a)"},
+  {id:"V", nome:"Vincenzo", colore:"var(--p-v)"},
+  {id:"Q", nome:"5ª persona", colore:"var(--p-q)"}
+];
+
+const GIORNI = ["Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato","Domenica"];
+const GIORNI_BREVI = ["Lun","Mar","Mer","Gio","Ven","Sab","Dom"];
+const PASTI = ["colazione","spuntino","pranzo","merenda","cena"];
+const PASTI_NOMI = {colazione:"Colazione", spuntino:"Spuntino", pranzo:"Pranzo", merenda:"Merenda", cena:"Cena"};
+
+// ================== PROFILI DIETE COMPONIBILI ==================
+// gruppi: oggetti {chiave: grammi}; chiavi composte "a:10+b:20"; frutta "f:nome" o "f:*"
+const LIQ = {latte_sl:150, latte_ps:150, latte_veg:150, yogurt_sl:1, yogurt_greco:100, kefir:125};
+const TOP = {marmellata:30, miele:20, acero:20, nocciolata:15, burro_arachidi:15, cioccolato:15};
+const GRASSO = {olio:1, olive:40, avocado:40, frutta_secca:15, burro_arachidi:15};
+const PROT_COL = {albume:80, grana:15, cotto:40, crudo:40, philadelphia_sl:30, bresaola:40, "uova:1+grana:5":1, uova:2, tonno:50, salmone_aff:30};
+
+const PROFILI = {
+  V_sport: {persona:"V", nome:"Giorno di palestra", breve:"Con palestra",
+    note:"Se si allena al pomeriggio, scambia i due spuntini.",
+    colazione:{
+      dolce:[{cornflakes:80, avena:70, fiocchi_riso:70, granola:75, biscotti_int:80, biscotti_secchi:80, muesli:70, biscotti_riso:80, fette_bisc:8, pane_int:120}, LIQ, TOP],
+      salata:[{pane_segale:120, pane_int:120, frisa:120, wasa:80, riso_basmati:75, couscous:75}, PROT_COL, GRASSO],
+      pancake:80},
+    spuntino:[{crackers:60, pane_int:100},{grana:20, cotto:40, tonno:40, philadelphia:40, bresaola:20}],
+    pranzo:{carb:{pasta_int:160, riso_int:150, riso_rosso:150, pasta_sc:160, pasta_kamut:160, riso_basmati:150, riso_venere:150, farro:150, orzo:150, quinoa:150, saraceno:150, bulgur:150, couscous:150, patate:700, pane_int:190, pane_segale:190, piselli:400, lenticchie:160, ceci:160, fagioli:160, "pasta_int:120+ceci:80":1, "pasta_int:120+fagioli:80":1},
+      prot:{pollo:150, tacchino:150, vitello:150, hamb_vitello:150, lonza:120, bresaola:100, crudo:100, fesa:120, tonno:150, salmone_nat:110, cozze:220, merluzzo:200, orata:150, gamberetti:200, mozzarella:120, giuncata:120, ricotta:200, grana:60, cacioricotta:80, fiocchi_latte:200, "grana:20+bresaola:60":1, "mozzarella:50+speck:50":1, "uova:1+tonno:100":1, "fesa:100+robiola:40":1},
+      olio:2.5},
+    merenda:[{frutta_secca:20, cioccolato:20, cocco_dis:20, olive:40, cocco_fresco:40},{"f:*":300}],
+    cena:{prot:{vitello:400, hamb_vitello:350, sals_vitello:350, costata:400, pollo:400, hamb_pollo:350, sals_pollo:350, tacchino:400, lonza:350, cavallo:350, tonno_fresco:300, merluzzo:500, spigola:500, persico:500, orata:400, spada:300, salmone:250, polpo:550, seppie:480, calamari:480, "bresaola:150+grana:30":1, "fesa:180+grana:30":1},
+      omelette:"uova:2+mozzarella:100+cotto:120", side:{pane_int:120, frisa:120}, olio:2}
+  },
+  V_rest: {persona:"V", nome:"Giorno senza palestra", breve:"Senza palestra",
+    colazione:{
+      dolce:[{cornflakes:60, avena:50, fiocchi_riso:50, granola:55, biscotti_int:60, biscotti_secchi:60, muesli:50, biscotti_riso:60, fette_bisc:6, pane_int:100}, LIQ, TOP],
+      salata:[{pane_segale:100, pane_int:100, frisa:100, wasa:70, riso_basmati:65, couscous:65}, PROT_COL, GRASSO],
+      pancake:70},
+    spuntino:[{crackers:60, pane_int:100},{grana:30, cotto:40, tonno:40, philadelphia:40, bresaola:20}],
+    pranzo:{carb:{pasta_int:120, riso_int:110, riso_rosso:110, pasta_sc:120, pasta_kamut:120, riso_basmati:110, riso_venere:110, farro:110, orzo:110, quinoa:110, saraceno:110, bulgur:110, couscous:110, patate:500, pane_int:140, pane_segale:140, piselli:300, lenticchie:120, ceci:120, fagioli:120, "pasta_int:90+ceci:80":1, "pasta_int:90+fagioli:80":1},
+      prot:{pollo:180, tacchino:180, vitello:180, hamb_vitello:160, lonza:140, bresaola:120, crudo:130, fesa:140, tonno:170, salmone_nat:130, cozze:250, merluzzo:220, orata:160, gamberetti:250, mozzarella:150, giuncata:150, ricotta:250, grana:80, cacioricotta:100, fiocchi_latte:250, "grana:20+bresaola:80":1, "mozzarella:100+speck:50":1, "uova:2+tonno:100":1, "fesa:100+robiola:80":1},
+      olio:1.5},
+    merenda:[{frutta_secca:20, cioccolato:20, cocco_fresco:40},{"f:*":300}],
+    cena:{prot:{vitello:250, hamb_vitello:250, sals_vitello:250, costata:250, pollo:250, hamb_pollo:250, sals_pollo:250, tacchino:250, lonza:220, cavallo:220, tonno_fresco:200, merluzzo:300, spigola:300, persico:300, orata:220, spada:200, salmone:180, polpo:380, seppie:340, calamari:340, "bresaola:150+grana:20":1, "fesa:180+grana:20":1},
+      omelette:"uova:2+mozzarella:80+cotto:100", side:{pane_int:100, frisa:100}, olio:3}
+  },
+  A_lunga: {persona:"A", nome:"Uscita lunga (3 ore e più)", breve:"Bici lunga",
+    note:"Colazione prima dell'uscita, spuntino dopo.",
+    colazione:{
+      dolce:[{cornflakes:60, avena:50, fiocchi_riso:50, granola:55, biscotti_int:60, biscotti_secchi:60, muesli:50, biscotti_riso:60, fette_bisc:6, pane_int:100}, LIQ, TOP],
+      salata:[{pane_segale:100, pane_int:100, frisa:100, wasa:70, riso_basmati:65, couscous:65}, PROT_COL, GRASSO],
+      pancake:70},
+    spuntino:[{crackers:60, pane_int:100},{grana:30, cotto:50, tonno:50, philadelphia:60, bresaola:40}],
+    pranzo:{carb:{pasta_int:150, riso_int:140, riso_rosso:140, pasta_sc:150, pasta_kamut:150, riso_basmati:140, riso_venere:140, farro:140, orzo:140, quinoa:130, saraceno:130, bulgur:130, couscous:130, patate:700, pane_int:180, pane_segale:180, piselli:450, lenticchie:150, ceci:150, fagioli:150, "pasta_int:120+ceci:80":1, "pasta_int:120+fagioli:80":1},
+      prot:{pollo:150, tacchino:150, vitello:150, hamb_vitello:150, lonza:120, bresaola:100, crudo:100, fesa:120, tonno:150, salmone_nat:110, cozze:220, merluzzo:200, orata:150, gamberetti:200, mozzarella:120, giuncata:120, ricotta:200, grana:60, cacioricotta:80, fiocchi_latte:200, "grana:20+bresaola:60":1, "mozzarella:50+speck:50":1, "uova:1+tonno:100":1, "fesa:100+robiola:40":1, "uova:2+speck:30":1},
+      olio:2},
+    merenda:[{frutta_secca:30, cioccolato:30, cocco_fresco:50},{"f:*":400}],
+    cena:{prot:{vitello:250, hamb_vitello:250, sals_vitello:250, costata:250, pollo:250, hamb_pollo:250, sals_pollo:250, tacchino:250, lonza:220, cavallo:250, tonno_fresco:250, merluzzo:300, spigola:300, persico:300, orata:250, spada:250, salmone:200, polpo:500, seppie:430, calamari:420, "bresaola:130+grana:30":1, "fesa:150+grana:30":1},
+      omelette:"uova:2+mozzarella:80+cotto:100", side:{pane_int:150, frisa:150}, olio:2}
+  },
+  A_corta: {persona:"A", nome:"Uscita corta o tennis", breve:"Bici corta o tennis",
+    note:"Se gioca a tennis, scambia i due spuntini. Colazione prima dell'uscita in bici.",
+    colazione:{
+      dolce:[{cornflakes:50, avena:40, fiocchi_riso:40, granola:40, biscotti_int:50, biscotti_secchi:50, muesli:40, biscotti_riso:50, fette_bisc:5, pane_int:80}, LIQ, TOP],
+      salata:[{pane_segale:80, pane_int:80, frisa:80, wasa:50, riso_basmati:40, couscous:35}, PROT_COL, GRASSO],
+      pancake:50},
+    spuntino:[{crackers:60, pane_int:100, "f:mela":400, "f:pera":400, "f:arancia":400, "f:kiwi":400, "f:melograno":400, "f:prugne":400, "f:mandarini":400, "f:uva":300, "f:banana":200},{grana:30, cotto:50, tonno:50, philadelphia:60, bresaola:40}],
+    pranzo:{carb:{pasta_int:140, riso_int:130, riso_rosso:130, pasta_sc:140, pasta_kamut:140, riso_basmati:130, riso_venere:130, farro:130, orzo:130, quinoa:120, saraceno:120, bulgur:120, couscous:120, patate:550, pane_int:160, pane_segale:160, piselli:350, lenticchie:130, ceci:130, fagioli:130, "pasta_int:110+ceci:80":1, "pasta_int:110+fagioli:80":1},
+      prot:{pollo:100, tacchino:100, vitello:100, hamb_vitello:100, lonza:80, bresaola:60, crudo:80, fesa:80, tonno:110, salmone_nat:80, cozze:180, merluzzo:150, orata:100, gamberetti:180, mozzarella:80, giuncata:80, ricotta:150, grana:50, cacioricotta:70, fiocchi_latte:150, "grana:20+bresaola:50":1, "mozzarella:50+speck:30":1, "uova:1+tonno:60":1, "fesa:60+robiola:40":1, "uova:2+speck:30":1},
+      olio:2},
+    merenda:[{frutta_secca:30, cioccolato:30, cocco_fresco:50},{"f:*":400}],
+    cena:{prot:{vitello:230, hamb_vitello:230, sals_vitello:200, costata:200, pollo:230, hamb_pollo:230, sals_pollo:200, tacchino:230, lonza:200, cavallo:200, tonno_fresco:180, merluzzo:300, spigola:300, persico:300, orata:230, spada:200, salmone:170, polpo:400, seppie:350, calamari:330, "bresaola:120+grana:30":1, "fesa:150+grana:30":1},
+      omelette:"uova:2+mozzarella:80+cotto:80", side:{pane_int:120, frisa:120}, olio:1.5}
+  },
+  A_rest: {persona:"A", nome:"Giorno rest", breve:"Senza sport",
+    colazione:{
+      dolce:[{cornflakes:60, avena:60, fiocchi_riso:50, granola:55, biscotti_int:60, biscotti_secchi:60, muesli:50, biscotti_riso:60, fette_bisc:6, pane_sc:100}, LIQ, TOP],
+      salata:[{pane_segale:100, pane_int:100, frisa:100, wasa:80, riso_basmati:60, couscous:55}, {albume:100, grana:20, cotto:50, crudo:50, philadelphia_sl:30, bresaola:40, "uova:1+grana:15":1, uova:2, tonno:60, salmone_aff:40}, GRASSO],
+      pancake:50},
+    spuntino:[{"f:albicocche":200, "f:ananas":150, "f:arancia":150, "f:melograno":150, "f:mandarini":100, "f:uva":100, "f:cachi":100, "f:kiwi":160, "f:banana":100, frutta_dis:20, crackers:30},{frutta_secca:20, cioccolato:20, cocco_fresco:40, olive:40, avocado:40}],
+    pranzo:{carb:{pasta_sc:120, pasta_int:120, pasta_kamut:120, pasta_fresca:150, bulgur:110, riso_basmati:120, riso_int:110, riso_venere:120, saraceno:110, lenticchie:130, ceci:130, fagioli:130, piselli:300, pane_int:150, pane_segale:150, frisa:150, patate:450, "pasta_int:90+ceci:50":1, "pasta_int:90+fagioli:50":1, "couscous:80+ceci:40+feta:40":1},
+      prot:{tonno:100, salmone_nat:60, gamberetti:150, sgombro:80, grana:30, cacioricotta:50, mozzarella_sl:60, giuncata:60, stracchino:40, ricotta_sl:100, bresaola:60, cotto:90, crudo:70, uova:2, fesa:80, philadelphia_sl:50, pollo:100, tacchino:100, vitello:100, polpo:200, seppie:170, calamari:180, "bresaola:40+philadelphia_sl:20":1, "pollo:80+grana:10":1, "tonno:50+uova:1":1, "uova:2+speck:30":1},
+      olio:1},
+    merenda:[{yogurt_sl:1, grana:20, lupini:50, kefir:125, latte_sl:150},{"f:*":300, frutta_dis:25, avena:20, frisa:40}],
+    cena:{prot:{merluzzo:350, spigola:350, pollo:280, tacchino:280, hamb_pollo:280, sals_pollo:280, vitello:280, hamb_vitello:280, sals_vitello:280, cavallo:250, lonza:250, mozzarella_sl:200, philadelphia_sl:250, ricotta_sl:280, orata:250, spada:230, polpo:500, tonno_fresco:230, salmone:200, "bresaola:140+grana:5":1, "fesa:160+grana:5":1, crudo:170},
+      mozzarella:"mozzarella_sl:200", side:{pane_sc:100, frisa:100, riso_basmati:80, quinoa:80}, olio:1}
+  },
+  M_medi: {persona:"M", nome:"Giorno medio", breve:"Giorno normale",
+    colazione:{
+      dolce:[{cornflakes:50, avena:50, biscotti_int:50, biscotti_secchi:50, muesli:50, biscotti_riso:50, fette_bisc:5, pane_int:70},{latte_sl:150, yogurt_sl:1, kefir:125},{marmellata:30, miele:20, acero:20, nocciolata:20}],
+      salata:[{pane_segale:80, frisa:80, wasa:60},{albume:80, grana:25, cotto:30, crudo:30, philadelphia_sl:20, uova:2, tonno:40, salmone_aff:30},{olio:0.33, olive:30, avocado:30, frutta_secca:10}],
+      pancake:40},
+    spuntino:[{"f:mela":150, "f:pera":150, "f:arancia":150, "f:melograno":150, "f:mandarini":100, "f:uva":100, "f:cachi":100, "f:kiwi":160, "f:ananas":150, "f:banana":100, crackers:30},{frutta_secca:15, cioccolato:15, olive:40, cocco_dis:15}],
+    pranzo:{carb:{pasta_sc:90, pasta_int:90, pasta_kamut:90, pasta_fresca:110, bulgur:80, riso_basmati:80, riso_int:80, riso_venere:80, saraceno:80, lenticchie:80, ceci:80, fagioli:80, piselli:250, pane_int:120, pane_segale:120, frisa:120, patate:350, "pasta_int:60+ceci:50":1, "pasta_int:60+fagioli:50":1},
+      prot:{tonno:50, salmone_nat:40, gamberetti:80, sgombro:40, grana:20, cacioricotta:30, mozzarella:40, giuncata:40, stracchino:50, ricotta:80, bresaola:30, cotto:50, crudo:40, fesa:40, pollo:60, tacchino:60, vitello:60, polpo:100, seppie:80, calamari:80},
+      olio:1},
+    merenda:[{yogurt_sl:1, grana:20, lupini:50, kefir:125},{"f:*":300}],
+    cena:{prot:{merluzzo:200, spigola:200, pollo:150, tacchino:140, hamb_pollo:150, sals_pollo:150, vitello:150, hamb_vitello:150, sals_vitello:150, cavallo:140, lonza:130, mozzarella:120, ricotta:180, orata:150, spada:180, polpo:300, tonno_fresco:160, salmone:130, "bresaola:80+grana:20":1, "fesa:100+grana:20":1, crudo:120, cotto:130},
+      mozzarella:"bufala:120", side:{pane_int:50, pane_sc:50, frisa:50}, olio:2}
+  },
+  M_low: {persona:"M", nome:"Giorno senza pasta e pane", breve:"Senza pasta e pane",
+    note:"Colazione salata da preferire. A pranzo niente carboidrati.",
+    colazione:{
+      dolce:[{cornflakes0:60, avena:60, granola:55, biscotti_int:60, muesli:50, pane_int:100}, LIQ, {nocciolata:15, burro_arachidi:15, cioccolato:15, marmellata:30, miele:20}],
+      salata:[{pane_segale:100, frisa:100, wasa:80},{albume:100, grana:20, cotto:50, crudo:50, philadelphia_sl:30, bresaola:40, "uova:1+grana:15":1, uova:2, tonno:60, salmone_aff:40}, GRASSO],
+      pancake:50},
+    spuntino:[{frutta_secca:25, cioccolato:25, cocco_fresco:50, olive:50, avocado:50},{"f:mela":300, "f:arancia":300, "f:mandarini":300, "f:ananas":300, "f:fragole":300, "f:frutti rossi":300}],
+    pranzo:{carb:null,
+      prot:{tonno:100, salmone_nat:60, gamberetti:150, sgombro:80, grana:30, cacioricotta:50, mozzarella:60, giuncata:60, stracchino:40, ricotta:100, bresaola:60, cotto:90, crudo:70, uova:2, fesa:80, philadelphia:50, pollo:100, tacchino:100, vitello:100, polpo:200, seppie:170, calamari:180, "bresaola:40+philadelphia:20":1, "pollo:80+grana:10":1, "tonno:50+uova:1":1},
+      olio:2},
+    merenda:[{frutta_secca:20, olive:40, cioccolato:20},{yogurt_sl:1, kefir:120, grana:20, lupini:50}],
+    cena:{prot:{merluzzo:220, spigola:220, pollo:170, tacchino:170, hamb_pollo:170, sals_pollo:170, vitello:170, hamb_vitello:170, sals_vitello:170, cavallo:150, lonza:150, mozzarella:120, philadelphia:180, ricotta:180, orata:150, spada:150, polpo:300, tonno_fresco:180, salmone:150, "bresaola:90+grana:5":1, "fesa:110+grana:5":1, crudo:120, cotto:140},
+      mozzarella:"bufala:120", side:null, olio:2.5}
+  }
+};
+
+// ================== LUDOVICA: piano a calendario ==================
+const FRUTTA_L1 = {mela:150, kiwi:150, mirtilli:200, albicocche:200, pera:200, ananas:200, prugne:200, pesca:250, fragole:250, melone:250, anguria:350};
+const FRUTTA_L2 = {mela:100, kiwi:100, mirtilli:150, albicocche:150, pera:150, ananas:150, prugne:150, pesca:200, fragole:200, melone:200, anguria:300};
+const FRUTTA_L_GIORNO = ["mela","pera","kiwi","prugne","ananas","mela","pera"];
+
+const LUDOVICA = [
+  { // Lunedì
+    colazione:{t:"1 vasetto di yogurt bianco (o 150 ml di latte p.s.) + 30 g di fiocchi d'avena (o biscotti secchi o cereali integrali) + 20 g di frutta secca (o cioccolato 75%)", idea:"Porridge overnight", items:[["yogurt",1],["avena",30],["frutta_secca",20]], alts:[["latte_ps",150],["biscotti_secchi",30],["cioccolato",20]]},
+    spuntino:{t:"20 g di cioccolato al 75%", items:[["cioccolato",20]]},
+    pranzo:{t:"2 uova + 50 g di mozzarella (o giuncata) + 200 g di verdura + 1 cucchiaio di olio", idea:"Insalatona con uova sode, mozzarella, rucola e zucchine grigliate", items:[["uova",2],["mozzarella",50],["v:zucchine",200],["olio",1]], alts:[["giuncata",50]]},
+    merenda:{t:"15 g di frutta secca + frutta a scelta", items:[["frutta_secca",15],["fruttaL",1]]},
+    cena:{prot:{tacchino:200, coscette_pollo:200}, olio:1, side:null}
+  },
+  { // Martedì
+    colazione:{t:"100 ml di latte p.s. + 1 uovo + 50 g di farina d'avena + 20 g di marmellata + 5 g di burro d'arachidi", idea:"Pancake con marmellata e burro d'arachidi", items:[["latte_ps",100],["uova",1],["farina_avena",50],["marmellata",20],["burro_arachidi",5]]},
+    spuntino:{t:"5 g di frutta secca (o cioccolato 75%) + 100 g di crudité (carote, sedano o finocchi)", items:[["frutta_secca",5],["v:carote",100]]},
+    pranzo:{t:"60 g di farro (o riso basmati o cous cous) + 20 g di grana + 40 g di prosciutto crudo magro (o bresaola) + 200 g di verdura + 1 cucchiaio di olio", idea:"Insalata di farro con scaglie di grana, crudo, melanzane grigliate, rucola e pomodorini. In alternativa: 60 g di riso basmati o cous cous + 80 g di feta o philadelphia + 200 g di verdura + 1 cucchiaino di olio + 7-8 olive", items:[["farro",60],["grana",20],["crudo",40],["v:melanzane",200],["olio",1]], alts:[["riso_basmati",60],["couscous",60],["bresaola",40],["feta",80],["philadelphia",80]]},
+    merenda:{t:"5 g di cioccolato al 75% + frutta a scelta", items:[["cioccolato",5],["fruttaL",2]]},
+    cena:{prot:{vitello:160, diaframma:160}, olio:1, side:{pane_int:40}}
+  },
+  { // Mercoledì
+    colazione:{t:"200 ml di latte p.s. + 30 g di fiocchi d'avena + 10 g di burro d'arachidi (o cioccolato 75%)", idea:"Porridge con cioccolato", items:[["latte_ps",200],["avena",30],["burro_arachidi",10]]},
+    spuntino:{t:"20 g di frutta secca + frutta a scelta", items:[["frutta_secca",20],["fruttaL",2]]},
+    pranzo:{t:"80 g di tonno al naturale (o 60 g di salmone al naturale) + 70 g di mozzarella (o giuncata) + 200 g di verdura + 1 cucchiaio di olio", idea:"Insalatona con tonno, mozzarella, lattuga, carote e pomodorini", items:[["tonno",80],["mozzarella",70],["v:lattuga",200],["olio",1]], alts:[["salmone_nat",60],["giuncata",70]]},
+    merenda:{t:"15 g di frutta secca + frutta a scelta", items:[["frutta_secca",15],["fruttaL",2]]},
+    cena:{prot:{lonza:180, arista:180}, extra:[["olive",20]], olio:1, side:null}
+  },
+  { // Giovedì
+    colazione:{t:"200 ml di latte p.s. + 30 g di fiocchi d'avena (o muesli) + 10 g di frutta secca (o cioccolato 75%)", idea:"Porridge con frutta secca", items:[["latte_ps",200],["avena",30],["frutta_secca",10]], alts:[["muesli",30]]},
+    spuntino:{t:"5 g di frutta secca (o cioccolato 75%) + 100 g di crudité", items:[["frutta_secca",5],["v:finocchi",100]]},
+    pranzo:{t:"70 g di pasta integrale (o 90 g di pasta fresca integrale) + 120 g di ricotta (o primo sale) + 200 g di verdura + 1 cucchiaio di olio", idea:"Pasta con crema di zucchine, ricotta e basilico", items:[["pasta_int",70],["ricotta",120],["v:zucchine",200],["olio",1]], alts:[["pasta_fresca",90],["primo_sale",120]]},
+    merenda:{t:"1 vasetto di yogurt bianco + frutta a scelta", items:[["yogurt",1],["fruttaL",2]]},
+    cena:{prot:{spigola:250, persico:250}, olio:1, side:{pane_int:30}}
+  },
+  { // Venerdì
+    colazione:{t:"200 ml di latte senza lattosio + 40 g di pane integrale + 20 g di marmellata", items:[["latte_sl",200],["pane_int",40],["marmellata",20]]},
+    spuntino:{t:"10 g di frutta secca + frutta a scelta", items:[["frutta_secca",10],["fruttaL",2]]},
+    pranzo:{t:"50 g di farro (o riso basmati o grano saraceno) + 30 g di legumi secchi (o 90 g precotti in vetro) + 200 g di verdura + 1 cucchiaio e mezzo di olio", idea:"Insalata di farro con ceci, rucola, pomodorini e zucchine grigliate", items:[["farro",50],["ceci",30],["v:pomodori",200],["olio",1.5]], alts:[["riso_basmati",50],["saraceno",50],["lenticchie",30],["fagioli",30]]},
+    merenda:{t:"30 g di crackers o taralli integrali + 20 g di grana", tMozz:"20 g di grana (senza crackers, perché stasera c'è la mozzarella)", items:[["crackers",30],["grana",20]], itemsMozz:[["grana",20]]},
+    cena:{prot:{pollo:200, sals_pollo:200, hamb_pollo:200}, mozz:{bufala:150}, olio:1, oliMozz:0.33, side:{pane_int:30}}
+  },
+  { // Sabato
+    colazione:{t:"120 ml di latte + 40 g di fiocchi d'avena + 5 g di cioccolato 75% (o burro d'arachidi) + frutta a scelta", idea:"Porridge con frutta fresca", items:[["latte_ps",120],["avena",40],["cioccolato",5],["fruttaL",2]]},
+    spuntino:{t:"5 g di frutta secca + 150 g di crudité", items:[["frutta_secca",5],["v:carote",150]]},
+    pranzo:{t:"150 g di persico (o nasello o platessa) + 20 g di olive + 200 g di verdura + 1 cucchiaio di olio", idea:"Persico con pomodorini, olive e insalata verde", items:[["persico",150],["olive",20],["v:lattuga",200],["olio",1]], alts:[["nasello",150],["platessa",150]]},
+    merenda:{t:"150 g di yogurt greco 0% (o kefir) + frutta a scelta", items:[["yogurt_greco",150],["fruttaL",2]]},
+    cena:{pizza:true}
+  },
+  { // Domenica
+    colazione:{t:"100 ml di latte p.s. + 1 uovo + 50 g di farina d'avena + 5 g di burro d'arachidi (o frutta secca) + frutta a scelta", idea:"Pancake con frutta fresca e noci", items:[["latte_ps",100],["uova",1],["farina_avena",50],["burro_arachidi",5],["fruttaL",2]]},
+    spuntino:{t:"1 vasetto di yogurt bianco senza lattosio", items:[["yogurt_sl",1]]},
+    pranzo:{t:"Primo a scelta (max 60 g) + secondo a scelta + 200 g di verdure + 1 cucchiaio di olio + un dolcetto o un frutto", idea:"Pranzo della domenica: niente frutta e dolce insieme, o uno o l'altro", items:[["pasta_int",60],["olio",1]]},
+    merenda:null,
+    cena:{prot:"domenica", g:150, olio:1, side:null}
+  }
+];
+
+// ================== CENE COMUNI ==================
+const CENE = [
+  {prot:"tacchino", verdura:"finocchi", nome:"Petto di tacchino"},
+  {prot:"vitello", verdura:"zucchine", nome:"Filetto di vitello"},
+  {prot:"lonza", verdura:"funghi", nome:"Lonza di maiale"},
+  {prot:"spigola", verdura:"spinaci", nome:"Spigola"},
+  {prot:"pollo", verdura:"zucca gialla", nome:"Petto di pollo", mozz:true},
+  {pizza:true, nome:"Pizza con verdure"},
+  {prot:"domenica", verdura:"broccoli", nome:"Carne o pesce"}
+];
+const DOMENICA_SCELTE = ["orata","spigola","merluzzo","pollo","tacchino","vitello"];
+
+// Le alternative previste dalla dieta di Ludovica per ogni sera: la scelta vale per tutta la famiglia.
+const OPZIONI_CENA = [
+  ["tacchino","coscette_pollo"],
+  ["vitello","diaframma"],
+  ["lonza","arista"],
+  ["spigola","persico"],
+  ["pollo","sals_pollo","hamb_pollo","mozz"],
+  [],
+  DOMENICA_SCELTE
+];
+const CENA_DEFAULT = ["tacchino","vitello","lonza","spigola","pollo","pizza","orata"];
+// se una persona non ha quell'alimento nella sua dieta, si usa il taglio equivalente
+const EQUIV_CENA = {coscette_pollo:"pollo", diaframma:"vitello", arista:"lonza", persico:"spigola",
+  sals_pollo:"pollo", hamb_pollo:"pollo", nasello:"merluzzo", platessa:"merluzzo"};
+function grammiCena(prot, k) {
+  let x = k, giri = 0;
+  while (x && giri < 4) { if (prot && prot[x] !== undefined) return prot[x]; x = EQUIV_CENA[x]; giri++; }
+  return undefined;
+}
+function nomeOpzioneCena(k) { return k === "mozz" ? "Mozzarella di bufala" : (F[k] ? F[k][0] : k); }
+
+// fattori crudo -> cotto (cottura arrosto/piastra; pasta e riso bolliti)
+const FATTORI = {tacchino:0.9, vitello:0.75, pollo:0.9, spigola:0.7, orata:0.7, merluzzo:0.7, spada:0.7, tonno_fresco:0.7,
+  coscette_pollo:0.85, diaframma:0.75, arista:0.7, persico:0.7, sals_pollo:0.85, hamb_pollo:0.85,
+  pasta_int:2.0, pasta_sc:2.0, pasta_kamut:2.0, riso_int:2.5, riso_basmati:2.5, riso_venere:2.5, riso_rosso:2.5,
+  ceci:3.0, fagioli:2.5, lenticchie:2.5};
+
+const TABELLA_CONV = [
+  ["Pasta di semola corta (bollita)",2.0],["Pasta di semola lunga (bollita)",2.4],["Pasta all'uovo secca (bollita)",3.0],["Riso (bollito)",2.5],
+  ["Ceci secchi (bolliti)",3.0],["Fagioli secchi (bolliti)",2.5],["Lenticchie secche (bollite)",2.5],["Piselli freschi (bolliti)",0.87],
+  ["Petto di pollo (arrosto)",0.9],["Petto di tacchino (arrosto)",0.9],["Bovino magro (arrosto)",0.6],["Fettina di bovino (arrosto)",0.75],
+  ["Spigola o orata (arrosto)",0.7],["Merluzzo (arrosto)",0.7],["Tonno fresco o pesce spada (arrosto)",0.7],["Sgombro (arrosto)",0.7],
+  ["Zucchine e zucca (arrosto)",0.4],["Melanzane (arrosto)",0.4],["Funghi (arrosto)",0.4],["Peperoni (arrosto)",0.8],
+  ["Spinaci (bolliti)",0.8],["Carciofi (bolliti)",0.75],["Finocchi (bolliti)",0.85],["Patate pelate (bollite)",0.85]
+];
+
+// ================== PIATTI PER LO SWIPE (PRANZO) ==================
+// c: carboidrato (chiave, "combo:ceci" o null), p: proteina (chiave, lista di alternative o null)
+const PIATTI = [
+  {id:"pasta_uova_speck", n:"Pasta senatore Cappelli con uova, speck e carote", c:"pasta_sc", p:"uova:2+speck:30", v:"carote", fav:"A",
+    r:"Rosola lo speck in padella antiaderente senza olio e aggiungi le carote a julienne. Scola la pasta, spegni il fuoco e manteca con le uova sbattute. Olio a crudo alla fine."},
+  {id:"riso_bresaola", n:"Insalata di riso con bresaola, rucola e limone", c:"riso_basmati", p:"bresaola", v:"rucola", fav:"A",
+    r:"Lessa il riso e lascialo raffreddare. Unisci la bresaola a listarelle, la rucola, il succo di limone e l'olio a crudo."},
+  {id:"pasta_tonno", n:"Pasta integrale con tonno, pomodorini e rucola", c:"pasta_int", p:"tonno", v:"pomodori",
+    r:"Cuoci la pasta. Condiscila con il tonno sgocciolato, i pomodorini a pezzi e la rucola. Olio a crudo."},
+  {id:"pasta_zucca", n:"Pasta integrale con zucca e cacioricotta", c:"pasta_int", p:"cacioricotta", v:"zucca gialla",
+    r:"Cuoci la zucca a cubetti al vapore e schiacciala in crema. Condisci la pasta con la crema e il cacioricotta grattugiato. Olio a crudo."},
+  {id:"pasta_ricotta", n:"Pasta integrale con ricotta e zucchine", c:"pasta_int", p:["ricotta","ricotta_sl"], v:"zucchine",
+    r:"Lessa le zucchine insieme alla pasta. Scola e manteca con la ricotta e un po' d'acqua di cottura. Olio a crudo e basilico."},
+  {id:"pasta_ceci", n:"Pasta e ceci", c:"combo:ceci", p:null, v:"cipolla",
+    r:"Cuoci i ceci ammollati. Aggiungi la pasta corta e porta a cottura con rosmarino. Olio a crudo. Con i legumi non serve il secondo."},
+  {id:"pasta_fagioli", n:"Pasta e fagioli", c:"combo:fagioli", p:null, v:"sedano",
+    r:"Cuoci i fagioli con sedano e carota. Aggiungi la pasta e porta a cottura. Olio a crudo. Con i legumi non serve il secondo."},
+  {id:"lenticchie", n:"Zuppa di lenticchie e verdure", c:"lenticchie", p:null, v:"carote",
+    r:"Cuoci le lenticchie con carote, sedano e cipolla a pezzetti. Olio a crudo. Con i legumi non serve il secondo."},
+  {id:"riso_gamberi", n:"Riso basmati con gamberetti e zucchine", c:"riso_basmati", p:"gamberetti", v:"zucchine",
+    r:"Salta i gamberetti e le zucchine in padella antiaderente con un goccio d'olio. Unisci il riso lessato. Olio a crudo."},
+  {id:"riso_cozze", n:"Riso basmati con cozze e pomodorini", c:"riso_basmati", p:"cozze", v:"pomodori",
+    r:"Apri le cozze in padella coperta, sgusciale e unisci i pomodorini. Aggiungi il riso lessato. Olio a crudo."},
+  {id:"venere_salmone", n:"Riso venere con salmone e zucchine", c:"riso_venere", p:"salmone_nat", v:"zucchine",
+    r:"Lessa il riso venere. Unisci il salmone sbriciolato e le zucchine grigliate. Olio a crudo e limone."},
+  {id:"riso_merluzzo", n:"Riso integrale con merluzzo e spinaci", c:"riso_int", p:"merluzzo", v:"spinaci",
+    r:"Cuoci il merluzzo al vapore e gli spinaci lessati. Servili con il riso lessato. Olio a crudo."},
+  {id:"cous_pollo", n:"Cous cous con pollo e peperoni", c:"couscous", p:"pollo", v:"peperoni",
+    r:"Reidrata il cous cous in acqua calda. Unisci il pollo alla piastra a straccetti e i peperoni al forno. Olio a crudo."},
+  {id:"farro_tonno", n:"Insalata di farro con tonno e pomodorini", c:"farro", p:"tonno", v:"pomodori",
+    r:"Lessa il farro e raffreddalo. Unisci tonno, pomodorini e basilico. Olio a crudo."},
+  {id:"orzo_fiocchi", n:"Insalata d'orzo con fiocchi di latte e cetrioli", c:"orzo", p:"fiocchi_latte", v:"cetrioli",
+    r:"Lessa l'orzo e raffreddalo. Unisci i fiocchi di latte, i cetrioli a cubetti ed erbe aromatiche. Olio a crudo."},
+  {id:"quinoa_mozz", n:"Quinoa con mozzarella, pomodorini e basilico", c:"quinoa", p:"mozzarella", v:"pomodori",
+    r:"Sciacqua e lessa la quinoa. Unisci mozzarella a cubetti, pomodorini e basilico. Olio a crudo."},
+  {id:"kamut_polpo", n:"Pasta di kamut con polpo e pomodorini", c:"pasta_kamut", p:"polpo", v:"pomodori",
+    r:"Lessa il polpo e taglialo a pezzetti. Saltalo con i pomodorini e unisci la pasta. Olio a crudo e prezzemolo."},
+  {id:"frisa_mozz", n:"Frisa con pomodoro, mozzarella e basilico", c:"frisa", p:["mozzarella","mozzarella_sl"], v:"pomodori",
+    r:"Bagna la frisa in acqua fresca. Condiscila con pomodori a pezzi, mozzarella e basilico. Olio a crudo e origano."},
+  {id:"patate_tacchino", n:"Patate al forno con petto di tacchino", c:"patate", p:"tacchino", v:"lattuga",
+    r:"Cuoci le patate a spicchi in forno con rosmarino. Cuoci il tacchino alla piastra. Insalata a parte, olio a crudo."},
+  {id:"panino_bresaola", n:"Panino integrale con bresaola e rucola", c:"pane_int", p:"bresaola", v:"rucola",
+    r:"Farcisci il pane con bresaola, rucola e qualche goccia di limone. Olio a crudo."},
+  {id:"cous_ceci_feta", n:"Cous cous con ceci, feta e verdure", c:"couscous:80+ceci:40+feta:40", p:null, v:"pomodori",
+    r:"Piatto completo: reidrata il cous cous, unisci i ceci lessati, la feta a cubetti e le verdure. Olio a crudo."},
+  // senza carboidrati (solo giorni low carb di Tina)
+  {id:"lc_tonno", n:"Insalatona di tonno, lattuga e pomodorini", c:null, p:"tonno", v:"lattuga",
+    r:"Lattuga, pomodorini e tonno sgocciolato. Olio a crudo e limone."},
+  {id:"lc_pollo", n:"Petto di pollo alla piastra con zucchine grigliate", c:null, p:"pollo", v:"zucchine",
+    r:"Cuoci il pollo e le zucchine sulla piastra. Olio a crudo alla fine."},
+  {id:"lc_polpo", n:"Insalata di polpo, sedano e limone", c:null, p:"polpo", v:"sedano",
+    r:"Lessa il polpo, taglialo e condiscilo con sedano, limone e olio a crudo."},
+  {id:"lc_uova", n:"Frittata di 2 uova con spinaci", c:null, p:"uova", v:"spinaci",
+    r:"Frittata in forno o in padella antiaderente con gli spinaci lessati. Olio a crudo sul contorno."},
+  {id:"lc_gamberi", n:"Gamberetti saltati con zucchine", c:null, p:"gamberetti", v:"zucchine",
+    r:"Salta gamberetti e zucchine in padella antiaderente con un goccio d'olio. Olio a crudo alla fine."},
+  {id:"lc_bresaola", n:"Bresaola con philadelphia e rucola", c:null, p:"bresaola:40+philadelphia:20", v:"rucola",
+    r:"Involtini di bresaola ripieni di philadelphia, su letto di rucola. Olio a crudo."},
+  {id:"lc_caprese", n:"Caprese con mozzarella e pomodori", c:null, p:"mozzarella", v:"pomodori",
+    r:"Mozzarella e pomodori a fette, basilico e olio a crudo."},
+  {id:"lc_ricotta", n:"Ricotta con melanzane grigliate", c:null, p:"ricotta", v:"melanzane",
+    r:"Melanzane grigliate servite con la ricotta ed erbe aromatiche. Olio a crudo."}
+];
+
+// ricette cene
+const RICETTE_CENE = {
+  tacchino:"Straccetti di tacchino in padella antiaderente con un goccio d'olio, oppure alla piastra. Finocchi crudi a spicchi con limone. Olio a crudo sul piatto.",
+  vitello:"Filetto di vitello alla piastra, al punto di cottura che preferite. Zucchine grigliate. Olio a crudo.",
+  lonza:"Lonza al forno a 180 °C con rosmarino e funghi. Per Ludovica 20 g di olive nel piatto. Olio a crudo.",
+  spigola:"Spigola al forno con pomodorini e limone, circa 20 minuti a 180 °C. Spinaci lessati. Olio a crudo.",
+  pollo:"Petto di pollo alla piastra o al forno con erbe. Zucca gialla al forno a cubetti. Olio a crudo.",
+  mozz:"Mozzarella di bufala per Ludovica e Tina; per Antonio (giorni sport) e Vincenzo omelette con uova, mozzarella e prosciutto cotto, in padella antiaderente. Verdure grigliate.",
+  orata:"Orata al forno con pomodorini e olive, circa 20 minuti a 180 °C. Broccoli lessati. Olio a crudo.",
+  merluzzo:"Merluzzo al vapore o al forno con limone e prezzemolo. Broccoli lessati. Olio a crudo.",
+  coscette_pollo:"Coscette di pollo senza pelle al forno con rosmarino, circa 35 minuti a 190 \u00b0C. Finocchi crudi a spicchi. Olio a crudo.",
+  diaframma:"Diaframma alla piastra ben calda, 3 minuti per lato, poi lascialo riposare prima di tagliarlo. Zucchine grigliate. Olio a crudo.",
+  arista:"Arista al forno a 180 \u00b0C con rosmarino e funghi. Per Ludovica 20 g di olive nel piatto. Olio a crudo.",
+  persico:"Filetti di persico al forno o in padella con limone e prezzemolo. Spinaci lessati. Olio a crudo.",
+  sals_pollo:"Salsiccia di pollo in padella antiaderente senza olio, poi sfumata con poca acqua. Zucca gialla al forno. Olio a crudo.",
+  hamb_pollo:"Hamburger di pollo alla piastra, 4 minuti per lato. Zucca gialla al forno a cubetti. Olio a crudo.",
+  pizza:"Pizza con verdure, impasto integrale o senatore Cappelli. Una volta a settimana."
+};
+
+const REGOLE = [
+  "I pesi sono sempre da intendere a crudo.",
+  "L'olio extravergine va aggiunto a crudo. In padella solo un goccio, senza soffriggere.",
+  "Cotture: vapore, piastra, griglia, forno, lesso o padella antiaderente.",
+  "Verdure crude o al massimo lessate.",
+  "Pizza al massimo una volta a settimana.",
+  "Domenica: pranzo libero. Alla fine del pasto o frutta o dolce, non entrambi.",
+  "Si può usare aceto di vino e limone. Niente aceto balsamico.",
+  "Frutta mista: dividi la quantità di ogni frutto per il numero di frutti usati.",
+  "Per Tina, Antonio e Vincenzo: carne rossa 1 volta a settimana, carne bianca 2, pesce 2-3, legumi 2, pasta 2, riso 2, uova fino a 6, affettati 1 (Tina ogni 10 giorni).",
+  "Banana, cachi, uva, melone e anguria al massimo 2 volte a settimana."
+];
+
+
+// ================== STATO ==================
+const STORE_KEY = "atavola_v1";
+function lunediDi(date) {
+  const d = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  const wd = (d.getDay() + 6) % 7;
+  d.setDate(d.getDate() - wd);
+  return d;
+}
+function isoDate(d) { return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0"); }
+function dataItaliana(iso) { const m = String(iso || "").match(/^(\d{4})-(\d{2})-(\d{2})$/); return m ? m[3] + "/" + m[2] + "/" + m[1] : String(iso || ""); }
+
+// Copie di partenza: servono per rimettere le diete originali quando se ne toglie una importata.
+const PROFILI_BASE = JSON.parse(JSON.stringify(PROFILI));
+const F_BASE = JSON.parse(JSON.stringify(F));
+function applicaDiete() {
+  Object.keys(PROFILI).forEach(k => delete PROFILI[k]);
+  Object.assign(PROFILI, JSON.parse(JSON.stringify(PROFILI_BASE)));
+  Object.keys(F).forEach(k => delete F[k]);
+  Object.assign(F, JSON.parse(JSON.stringify(F_BASE)));
+  Object.keys(S.diete || {}).sort().forEach(id => {
+    const d = S.diete[id];
+    if (d && d.alimenti) Object.assign(F, d.alimenti);
+    if (d && d.profili) Object.assign(PROFILI, d.profili);
+  });
+}
+function chiaviAlimento(spec) { return String(spec).split("+").map(x => x.split(":")[0].trim()).filter(Boolean); }
+function alimentiSconosciuti(profili, extra) {
+  const noti = Object.assign({}, F_BASE, extra || {});
+  const salta = new Set(["pancake","persona","nome","breve","note","g","olio","combo"]);
+  const ignoti = new Set();
+  const guarda = v => {
+    if (!v || typeof v !== "object") return;
+    if (Array.isArray(v)) { v.forEach(guarda); return; }
+    Object.keys(v).forEach(k => {
+      const val = v[k];
+      if (typeof val === "number") {
+        if (salta.has(k) || k.indexOf("*") >= 0 || k.startsWith("f:") || k.startsWith("v:")) return;
+        chiaviAlimento(k).forEach(x => { if (!noti[x] && !salta.has(x)) ignoti.add(x); });
+      } else if (typeof val === "string") {
+        if (k === "omelette") chiaviAlimento(val).forEach(x => { if (!noti[x] && !salta.has(x)) ignoti.add(x); });
+      } else guarda(val);
+    });
+  };
+  guarda(profili);
+  return Array.from(ignoti);
+}
+function importaFile(o) {
+  if (!o || typeof o !== "object") return {ok:false, msg:"Il file non è leggibile"};
+  if (o.tipo === "backup-a-tavola" && o.stato) {
+    S = Object.assign(statoIniziale(), o.stato);
+    S.attivi = Object.assign({L:true, M:true, A:true, V:true}, S.attivi || {});
+    if (!S.diete) S.diete = {};
+    if (!Array.isArray(S.spesa.extra)) S.spesa.extra = [];
+    applicaDiete();
+    return {ok:true, msg:"Dati ripristinati"};
+  }
+  if (o.tipo !== "dieta" || !o.profili || typeof o.profili !== "object") return {ok:false, msg:"Non sembra una scheda dieta"};
+  const chiavi = Object.keys(o.profili);
+  if (!chiavi.length) return {ok:false, msg:"Il file non contiene nessuna dieta"};
+  const alimenti = (o.alimenti && typeof o.alimenti === "object") ? o.alimenti : null;
+  const ignoti = alimentiSconosciuti(o.profili, alimenti);
+  if (ignoti.length) return {ok:false, msg:"Alimenti che non conosco: " + ignoti.slice(0, 3).join(", ")};
+  const id = "d" + Date.now();
+  S.diete[id] = {nome: String(o.nome || "Dieta importata").slice(0, 40), data: isoDate(new Date()), profili: o.profili, alimenti: alimenti};
+  applicaDiete();
+  riempiAutomatico();
+  return {ok:true, msg:"Dieta caricata: " + chiavi.length + (chiavi.length === 1 ? " profilo aggiornato" : " profili aggiornati")};
+}
+function leggiFileDieta(file) {
+  const r = new FileReader();
+  r.onload = () => {
+    let o = null;
+    try { o = JSON.parse(String(r.result)); } catch (e) { toast("Il file non è un JSON valido"); return; }
+    const esito = importaFile(o);
+    toast(esito.msg);
+    if (esito.ok) aggiorna();
+  };
+  r.onerror = () => toast("Non riesco a leggere il file");
+  r.readAsText(file);
+}
+function scaricaFile(nome, testo) {
+  try {
+    const b = new Blob([testo], {type:"application/json"});
+    const u = URL.createObjectURL(b);
+    const a = document.createElement("a");
+    a.href = u; a.download = nome;
+    document.body.appendChild(a); a.click();
+    setTimeout(() => { URL.revokeObjectURL(u); a.remove(); }, 1000);
+    toast("Copia salvata");
+  } catch (e) { toast("Il salvataggio non è riuscito"); }
+}
+
+function statoIniziale() {
+  return {
+    v:1, week: isoDate(lunediDi(new Date())),
+    agendaA:["rest","corta","rest","corta","rest","lunga","lunga"],
+    agendaV:["rest","rest","rest","rest","rest","rest","rest"],
+    mLow:[false,false,false,false,false,false,false],
+    cena: CENA_DEFAULT.slice(), satM:"pizza",
+    q:{on:true, nome:"5ª persona"}, maxDad:true,
+    attivi:{L:true, M:true, A:true, V:true}, diete:{},
+    cal:[0,1,2,3,4,5,6], salta:{}, confermati:{},
+    scelte:{}, pref:{}, ing:{},
+    spesa:{checked:{}, casa:{}, range:"tutto", extra:[]}
+  };
+}
+let S = statoIniziale();
+function carica() {
+  try {
+    const raw = localStorage.getItem(STORE_KEY);
+    if (raw) {
+      const o = JSON.parse(raw);
+      if (o && o.v === 1) {
+        S = Object.assign(statoIniziale(), o);
+        if (!Array.isArray(S.cena) || S.cena.length !== 7) S.cena = CENA_DEFAULT.slice();
+        if (o.fri === "mozz") S.cena[4] = "mozz";
+        if (o.sun) S.cena[6] = o.sun;
+        S.cena = S.cena.map((k, d) => d === 5 ? "pizza" : (k === "mozz" && d === 4 ? k : (F[k] ? k : CENA_DEFAULT[d])));
+        S.attivi = Object.assign({L:true, M:true, A:true, V:true}, S.attivi || {});
+        if (!S.diete || typeof S.diete !== "object") S.diete = {};
+        if (!Array.isArray(S.spesa.extra)) S.spesa.extra = [];
+        if (!Array.isArray(S.cal) || S.cal.length !== 7) S.cal = [0,1,2,3,4,5,6];
+        if (!S.salta || typeof S.salta !== "object") S.salta = {};
+        if (!S.confermati || typeof S.confermati !== "object") S.confermati = {};
+      }
+    }
+  } catch (e) { /* storage non disponibile: si lavora in memoria */ }
+}
+function salva() { try { localStorage.setItem(STORE_KEY, JSON.stringify(S)); } catch (e) {} }
+
+// ================== UTILI ==================
+function isCombo(k) { return !k.startsWith("f:") && !k.startsWith("v:") && k.includes(":"); }
+function parseCombo(k) { return k.split("+").map(p => { const [a,b] = p.split(":"); return [a, Number(b)]; }); }
+function lookup(group, key) {
+  if (!group) return undefined;
+  if (key in group) return group[key];
+  if (key.startsWith("f:") && ("f:*" in group)) return group["f:*"];
+  return undefined;
+}
+function voce(group, key) {
+  // restituisce gli ingredienti per una chiave di un gruppo
+  if (isCombo(key)) return parseCombo(key);
+  const g = lookup(group, key);
+  if (g === undefined) return null;
+  return [[key, g]];
+}
+function catDi(k) { const f = F[k]; return f && f[3] ? f[3] : null; }
+function rnd(seed) { let x = Math.sin(seed) * 10000; return x - Math.floor(x); }
+function frutteDelGruppo(group) {
+  const specifiche = Object.keys(group).filter(k => k.startsWith("f:") && k !== "f:*").map(k => k.slice(2));
+  if (specifiche.length) {
+    const ordinate = FRUTTA_STAGIONE.filter(f => specifiche.includes(f));
+    return ordinate.length ? ordinate : specifiche;
+  }
+  if ("f:*" in group) return FRUTTA_STAGIONE.slice(0, 7);
+  return [];
+}
+
+// ================== PROFILI DEL GIORNO ==================
+function profiloId(pid, d) {
+  if (pid === "M") { if (d === 6) return "M_libera"; return (d === 0 || d === 5 || S.mLow[d]) ? "M_low" : "M_medi"; }
+  if (pid === "A") return "A_" + S.agendaA[d];
+  if (pid === "V") return "V_" + S.agendaV[d];
+  return null;
+}
+function profiloCena(pid, d) {
+  if (pid === "Q") return "M_medi";
+  const p = profiloId(pid, d);
+  return p === "M_libera" ? "M_medi" : p;
+}
+function nomeProfilo(pid, d) {
+  if (pid === "L") return "Piano del " + GIORNI[d].toLowerCase();
+  if (pid === "Q") return "Porzione standard a cena";
+  const p = profiloId(pid, d);
+  if (p === "M_libera") return "Giornata libera";
+  const base = PROFILI[p].breve;
+  if (pid === "M" && p === "M_low" && S.mLow[d]) return base + ", dopo lo sgarro";
+  return base;
+}
+function slotAttivo(pid, d, meal) {
+  if (!["M","A","V"].includes(pid) || meal === "cena" || !attivo(pid)) return false;
+  if (saltato(pid, d, meal)) return false;
+  if (pid === "M" && d === 6) return false;
+  if (d === 6 && meal === "pranzo") return false;
+  return true;
+}
+function slotKey(pid, d, meal) { return pid + "|" + d + "|" + meal; }
+
+// ================== RISOLUZIONE PIATTI ==================
+function risolviPiatto(t, P) {
+  const pr = P.pranzo;
+  let items = [];
+  if (t.c === null) { if (pr.carb !== null) return null; }
+  else {
+    if (pr.carb === null) return null;
+    if (t.c.startsWith("combo:")) {
+      const leg = t.c.slice(6);
+      const k = Object.keys(pr.carb).find(x => x.includes("+") && x.includes(leg) && x.startsWith("pasta"));
+      if (!k) return null;
+      items = items.concat(parseCombo(k));
+    } else if (t.c.includes("+")) {
+      if (!(t.c in pr.carb)) return null;
+      items = items.concat(parseCombo(t.c));
+    } else {
+      const g = pr.carb[t.c]; if (g === undefined) return null;
+      items.push([t.c, g]);
+    }
+  }
+  if (t.p !== null) {
+    const alt = Array.isArray(t.p) ? t.p : [t.p];
+    const k = alt.find(x => x in pr.prot);
+    if (!k) return null;
+    items = items.concat(isCombo(k) ? parseCombo(k) : [[k, pr.prot[k]]]);
+  }
+  items.push(["v:" + t.v, 200]);
+  items.push(["olio", pr.olio]);
+  return {titolo: t.n, items, fav: t.fav};
+}
+
+const ETICHETTE_BREVI = {biscotti_secchi:"Biscotti secchi", frutta_secca:"Frutta secca", tonno:"Tonno al naturale",
+  yogurt_sl:"Yogurt senza lattosio", yogurt:"Yogurt bianco", fette_bisc:"Fette biscottate", "uova:1+grana:5":"1 uovo e grana",
+  "uova:1+grana:15":"1 uovo e grana", uova:"2 uova", pizza:"Pizza", olio:"Olio", marmellata:"Marmellata", cioccolato:"Cioccolato fondente"};
+function etichettaBreve(k) {
+  if (ETICHETTE_BREVI[k]) return ETICHETTE_BREVI[k];
+  if (k.startsWith("f:")) { const n = k.slice(2); return n.charAt(0).toUpperCase() + n.slice(1); }
+  if (isCombo(k)) return parseCombo(k).map(([a]) => etichettaBreve(a).toLowerCase()).join(" e ").replace(/^./, c => c.toUpperCase());
+  return F[k] ? F[k][0].replace(/\s*\(.*?\)/g, "") : k;
+}
+function titoloCombo(picks, tipo) {
+  if (tipo === "pancake") return "Pancake d'avena con " + etichettaBreve(picks[0]).toLowerCase();
+  return picks.map((k, i) => i === 0 ? etichettaBreve(k) : etichettaBreve(k).toLowerCase()).join(" + ");
+}
+function gruppiPasto(P, meal, tipo) {
+  if (meal === "colazione") return tipo === "salata" ? P.colazione.salata : P.colazione.dolce;
+  return P[meal];
+}
+function risolviCombo(choice, P, meal) {
+  const tipo = choice.tipo;
+  let items = [];
+  if (meal === "colazione" && tipo === "pancake") {
+    const top = P.colazione.dolce[2];
+    let k = choice.picks[0]; if (lookup(top, k) === undefined) k = Object.keys(top)[0];
+    items = [["uova",1], ["yogurt_greco",30], ["farina_avena", P.colazione.pancake], [k, top[k]]];
+    return {titolo: titoloCombo([k], "pancake"), items};
+  }
+  const gruppi = gruppiPasto(P, meal, tipo);
+  const picks = choice.picks.map((k, i) => {
+    const g = gruppi[i];
+    if (isCombo(k) ? (k in g) : lookup(g, k) !== undefined) return k;
+    return Object.keys(g)[0].replace("f:*", "f:" + (frutteDelGruppo(g)[0] || "mela"));
+  });
+  picks.forEach((k, i) => { const v = voce(gruppi[i], k); if (v) items = items.concat(v); });
+  return {titolo: titoloCombo(picks, tipo), items};
+}
+function risolviScelta(pid, d, meal) {
+  if (!slotAttivo(pid, d, meal)) return null;
+  const c = S.scelte[slotKey(pid, d, meal)];
+  if (!c) return null;
+  const P = PROFILI[profiloId(pid, d)];
+  if (c.k === "piatto") { const t = PIATTI.find(x => x.id === c.id); return t ? risolviPiatto(t, P) : null; }
+  if (c.k === "mano") return meal === "pranzo" ? risolviMano(c, P) : null;
+  return risolviCombo(c, P, meal);
+}
+function statoSlot(pid, d, meal) {
+  const c = S.scelte[slotKey(pid, d, meal)];
+  if (!c) return "vuoto";
+  return risolviScelta(pid, d, meal) ? "ok" : "da_rifare";
+}
+
+// ================== LUDOVICA ==================
+function pastoLudovica(d, meal) {
+  const g = LUDOVICA[d][meal];
+  if (!g || meal === "cena") return null;
+  const mozz = cenaMozz(d) && meal === "merenda";
+  const src = mozz ? g.itemsMozz : g.items;
+  const items = [];
+  src.forEach(([k, q]) => {
+    if (k === "fruttaL") { const f = FRUTTA_L_GIORNO[d]; items.push(["f:" + f, (q === 1 ? FRUTTA_L1 : FRUTTA_L2)[f]]); }
+    else items.push([k, q]);
+  });
+  return {titolo: mozz ? g.tMozz : g.t, idea: g.idea, items};
+}
+
+// ================== CENA COMUNE ==================
+function seraDi(d) { const s = S.cal ? S.cal[d] : d; return (s === undefined || s === null) ? d : s; }
+function spostaSera(d, sera) {
+  const attuale = seraDi(d);
+  if (attuale === sera) return;
+  const altro = S.cal.indexOf(sera);
+  S.cal[d] = sera;
+  if (altro >= 0) S.cal[altro] = attuale;
+}
+function proteinaCena(d) { const s = seraDi(d); const c = CENE[s]; if (c.pizza) return null; const k = S.cena[s]; return (k && k !== "mozz") ? k : (c.prot === "domenica" ? CENA_DEFAULT[6] : c.prot); }
+function cenaMozz(d) { return seraDi(d) === 4 && S.cena[4] === "mozz"; }
+function saltato(pid, d, meal) { return !!(S.salta && S.salta[slotKey(pid, d, meal)]); }
+function nomeCena(d) {
+  const c = CENE[seraDi(d)];
+  if (c.pizza) return "Pizza con verdure";
+  if (cenaMozz(d)) return "Serata mozzarella";
+  const k = proteinaCena(d);
+  return F[k][0];
+}
+function attivo(pid) { return pid === "Q" ? !!S.q.on : (!S.attivi || S.attivi[pid] !== false); }
+function attiviCasa() { return ["L","M","A","V"].filter(attivo); }
+function attiviFlex() { return ["M","A","V"].filter(attivo); }
+function presentiACena() { return PERSONE.filter(p => attivo(p.id)).map(p => p.id); }
+function cenaPersonaProfilo(pid, d, pidProfilo) {
+  const c = CENE[seraDi(d)];
+  const verd = c.verdura ? [["v:" + c.verdura, 200]] : [];
+  if (pid === "L") {
+    const lc = LUDOVICA[seraDi(d)].cena;
+    if (lc.pizza) return {titolo:"Pizza con verdure", items:[["pizza",1]]};
+    let items = [];
+    if (cenaMozz(d)) items.push(["bufala", 150]);
+    else if (lc.prot === "domenica") items.push([proteinaCena(d), lc.g]);
+    else { const k = proteinaCena(d); const g = grammiCena(lc.prot, k); items.push([k, g !== undefined ? g : (lc.g || 150)]); }
+    if (lc.side) Object.entries(lc.side).forEach(e => items.push(e));
+    if (lc.extra) items = items.concat(lc.extra);
+    items = items.concat(verd);
+    items.push(["olio", cenaMozz(d) ? lc.oliMozz : lc.olio]);
+    return {titolo: nomeCena(d), items};
+  }
+  const P = PROFILI[pidProfilo];
+  if (c.pizza) {
+    if (pid === "M" && S.satM === "low" && profiloId("M", d) === "M_low") {
+      const Pl = PROFILI.M_low;
+      return {titolo:"Orata al forno, senza pasta e pane", items:[["orata", Pl.cena.prot.orata], ["v:lattuga",200], ["olio", Pl.cena.olio]], nota:"Invece della pizza"};
+    }
+    return {titolo:"Pizza con verdure", items:[["pizza",1]]};
+  }
+  let items = [], titolo = nomeCena(d);
+  if (cenaMozz(d)) {
+    if (P.cena.mozzarella) items = parseCombo(P.cena.mozzarella);
+    else { items = parseCombo(P.cena.omelette); titolo = "Omelette con mozzarella e prosciutto cotto"; }
+  } else {
+    const k = proteinaCena(d);
+    const g = grammiCena(P.cena.prot, k);
+    if (g !== undefined) items.push([k, g]);
+    else items = parseCombo(P.cena.omelette);
+  }
+  if (P.cena.side) { const k = Object.keys(P.cena.side)[0]; items.push([k, P.cena.side[k]]); }
+  items = items.concat(verd);
+  items.push(["olio", P.cena.olio]);
+  return {titolo, items};
+}
+function cenaPersona(pid, d) { return cenaPersonaProfilo(pid, d, pid === "L" ? null : profiloCena(pid, d)); }
+function cenaPerSpesa(pid, d) {
+  if (pid === "A" && S.maxDad) {
+    const max = {};
+    ["A_lunga","A_corta","A_rest"].forEach(p => {
+      cenaPersonaProfilo("A", d, p).items.forEach(([k, q]) => { max[k] = Math.max(max[k] || 0, q); });
+    });
+    // tiene solo gli ingredienti del profilo del giorno (con la quantità più alta tra i profili)
+    const base = cenaPersona("A", d).items;
+    return base.map(([k]) => [k, max[k]]);
+  }
+  return cenaPersona(pid, d).items;
+}
+
+// ================== FREQUENZE ==================
+const LIMITI = {rossa:1, bianca:2, pesce:3, legumi:2, affettati:1, pasta:2, riso:2, cereali:3};
+function conteggi(pid, escludi) {
+  const c = {};
+  const add = items => { const visti = new Set(); items.forEach(([k]) => { const x = catDi(k); if (x && !visti.has(x)) { visti.add(x); c[x] = (c[x] || 0) + 1; } }); };
+  for (let d = 0; d < 7; d++) {
+    if (!CENE[d].pizza) add(cenaPersona(pid, d).items.filter(([k]) => catDi(k) !== "pasta" && catDi(k) !== "riso"));
+    if (slotKey(pid, d, "pranzo") !== escludi) { const r = risolviScelta(pid, d, "pranzo"); if (r) add(r.items); }
+  }
+  return c;
+}
+
+// ================== CANDIDATI PER LO SWIPE ==================
+function firma(choice) { return choice.k === "piatto" ? "p:" + choice.id : "c:" + choice.tipo + ":" + choice.picks.join(","); }
+function prefDi(pid, meal, choice, items) {
+  let s = S.pref[pid + "|" + meal + "|" + firma(choice)] || 0;
+  (items || []).forEach(([k]) => { s += (S.ing[pid + "|" + k] || 0); });
+  return s;
+}
+function candidati(pid, d, meal, seed) {
+  const P = PROFILI[profiloId(pid, d)];
+  const out = [];
+  let n = 0;
+  const pk = "LMAVQ".indexOf(pid) + 1;
+  const r = () => rnd(seed * 97 + (n++) * 13.7 + d * 3.1 + pk * 57.3 + meal.length * 11.1);
+  if (meal === "pranzo") {
+    const cnt = conteggi(pid, slotKey(pid, d, meal));
+    const prec = d > 0 ? S.scelte[slotKey(pid, d - 1, "pranzo")] : null;
+    PIATTI.forEach(t => {
+      const res = risolviPiatto(t, P); if (!res) return;
+      const ch = {k:"piatto", id:t.id};
+      let score = r() * 1.2 + prefDi(pid, meal, ch, res.items);
+      if (t.fav === pid) score += 1.5;
+      const cats = new Set(res.items.map(([k]) => catDi(k)).filter(Boolean));
+      const avvisi = [];
+      cats.forEach(x => { if (LIMITI[x] && (cnt[x] || 0) >= LIMITI[x]) { score -= 1.5; avvisi.push(x); } });
+      if (prec && prec.k === "piatto" && prec.id === t.id) score -= 2;
+      out.push({choice:ch, res, score, avvisi});
+    });
+  } else {
+    const combos = [];
+    const seen = new Set();
+    const tentativi = meal === "colazione" ? 40 : 60;
+    for (let i = 0; i < tentativi; i++) {
+      let tipo = "dolce";
+      if (meal === "colazione") { const x = r(); tipo = x < 0.45 ? "dolce" : x < 0.85 ? "salata" : "pancake"; if (profiloId(pid, d) === "M_low" && x < 0.3) tipo = "salata"; }
+      else tipo = "snack";
+      let picks;
+      if (tipo === "pancake") { const top = Object.keys(P.colazione.dolce[2]); picks = [top[Math.floor(r() * top.length)]]; }
+      else {
+        const gruppi = gruppiPasto(P, meal, tipo);
+        picks = gruppi.map(g => {
+          const keys = Object.keys(g);
+          let k = keys[Math.floor(r() * keys.length)];
+          if (k === "f:*") { const fr = frutteDelGruppo(g); k = "f:" + fr[Math.floor(r() * Math.min(fr.length, 5))]; }
+          return k;
+        });
+      }
+      const ch = {k:"combo", tipo, picks};
+      const f = firma(ch); if (seen.has(f)) continue; seen.add(f);
+      const res = risolviCombo(ch, P, meal);
+      let score = r() * 1.2 + prefDi(pid, meal, ch, res.items);
+      if (res.items.some(([k]) => k.startsWith("f:") && FRUTTA_LIMITATA.includes(k.slice(2)))) score -= 0.8;
+      combos.push({choice:ch, res, score, avvisi:[]});
+    }
+    out.push(...combos);
+  }
+  out.sort((a, b) => b.score - a.score);
+  return out;
+}
+function registraGusto(pid, meal, choice, items, delta) {
+  const k = pid + "|" + meal + "|" + firma(choice);
+  S.pref[k] = Math.max(-4, Math.min(4, (S.pref[k] || 0) + delta));
+  (items || []).forEach(([i]) => {
+    if (i === "olio" || i.startsWith("v:")) return;
+    const kk = pid + "|" + i;
+    S.ing[kk] = Math.max(-3, Math.min(3, (S.ing[kk] || 0) + delta * 0.4));
+  });
+}
+function slotVuoti(filtro) {
+  const out = [];
+  attiviFlex().forEach(pid => {
+    for (let d = 0; d < 7; d++) ["colazione","spuntino","pranzo","merenda"].forEach(meal => {
+      if (filtro && filtro !== "tutto" && !(filtro === "snack" ? (meal === "spuntino" || meal === "merenda") : meal === filtro)) return;
+      if (slotAttivo(pid, d, meal) && statoSlot(pid, d, meal) !== "ok") out.push({pid, d, meal});
+    });
+  });
+  // ordina per giorno, poi persona
+  out.sort((a, b) => a.d - b.d || "MAV".indexOf(a.pid) - "MAV".indexOf(b.pid));
+  return out;
+}
+function riempiAutomatico() {
+  let n = 0;
+  slotVuoti("tutto").forEach(({pid, d, meal}, i) => {
+    const c = candidati(pid, d, meal, Date.now() % 1000 + i * 7.3);
+    if (c.length) { S.scelte[slotKey(pid, d, meal)] = c[0].choice; n++; }
+  });
+  return n;
+}
+function totaliSlot() {
+  let tot = 0, ok = 0, miei = 0;
+  const per = {M:[0,0], A:[0,0], V:[0,0]};
+  attiviFlex().forEach(pid => { for (let d = 0; d < 7; d++) ["colazione","spuntino","pranzo","merenda"].forEach(meal => {
+    if (!slotAttivo(pid, d, meal)) return;
+    tot++; per[pid][1]++;
+    if (statoSlot(pid, d, meal) === "ok") ok++;
+    if (S.confermati[slotKey(pid, d, meal)] && statoSlot(pid, d, meal) === "ok") { miei++; per[pid][0]++; }
+  }); });
+  return {tot, ok, miei, per};
+}
+
+// ================== PASTI DEL GIORNO ==================
+function pastiDelGiorno(pid, d) {
+  const out = [];
+  ["colazione","spuntino","pranzo","merenda"].forEach(meal => {
+    if (saltato(pid, d, meal)) { out.push({meal, saltato:true, titolo:"Saltato"}); return; }
+    if (pid === "L") { const p = pastoLudovica(d, meal); if (p) out.push({meal, fisso:true, ...p}); return; }
+    if (!slotAttivo(pid, d, meal)) {
+      if (pid === "M" && d === 6) { if (meal === "colazione") out.push({meal:"libera", libero:true, titolo:"Giornata libera"}); }
+      else if (meal === "pranzo") out.push({meal, libero:true, titolo:"Pranzo libero della domenica"});
+      return;
+    }
+    const st = statoSlot(pid, d, meal);
+    const r = st === "ok" ? risolviScelta(pid, d, meal) : null;
+    out.push({meal, stato:st, ...(r || {})});
+  });
+  return out;
+}
+
+// ================== LISTA DELLA SPESA ==================
+function giorniRange(range) { return range === "a" ? [0,1,2] : range === "b" ? [3,4,5,6] : [0,1,2,3,4,5,6]; }
+function listaSpesa(range) {
+  const tot = {};
+  const add = (items, pid) => items.forEach(([k, q]) => {
+    if (!q) return;
+    if (!tot[k]) tot[k] = {q:0, chi:new Set()};
+    tot[k].q += q; tot[k].chi.add(pid);
+  });
+  giorniRange(range).forEach(d => {
+    presentiACena().forEach(pid => { if (!saltato(pid, d, "cena")) add(cenaPerSpesa(pid, d), pid); });
+    if (attivo("L")) ["colazione","spuntino","pranzo","merenda"].forEach(meal => { if (saltato("L", d, meal)) return; const p = pastoLudovica(d, meal); if (p) add(p.items, "L"); });
+    attiviFlex().forEach(pid => ["colazione","spuntino","pranzo","merenda"].forEach(meal => {
+      const r = risolviScelta(pid, d, meal); if (r) add(r.items, pid);
+    }));
+  });
+  return tot;
+}
+function repartoDi(k) {
+  if (k.startsWith("v:") || k.startsWith("f:")) return "verdura";
+  return F[k] ? F[k][1] : "dispensa";
+}
+function nomeSpesa(k) {
+  if (k.startsWith("v:")) return cap(k.slice(2));
+  if (k.startsWith("f:")) return cap(k.slice(2));
+  return F[k] ? F[k][0] : k;
+}
+function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+function numIt(x, dec) { return x.toLocaleString("it-IT", {maximumFractionDigits: dec === undefined ? 1 : dec}); }
+function qtaSpesa(k, q) {
+  const u = F[k] ? (F[k][2] || "g") : "g";
+  if (k === "uova") return Math.ceil(q) + " uova";
+  if (k === "yogurt" || k === "yogurt_sl") return Math.ceil(q) + " vasetti";
+  if (k === "fette_bisc") return Math.ceil(q) + " fette";
+  if (k === "pizza") return Math.ceil(q) + (Math.ceil(q) === 1 ? " pizza" : " pizze");
+  if (u === "cu") return "circa " + Math.ceil(q) + " cucchiai";
+  if (u === "ml") return q >= 1000 ? numIt(q / 1000) + " L" : Math.round(q) + " ml";
+  let s = q >= 1000 ? numIt(q / 1000, 2) + " kg" : Math.round(q) + " g";
+  if (["pasta","riso","cereali"].includes(catDi(k)) && q > 0) s += " · " + Math.ceil(q / 500) + (Math.ceil(q/500) === 1 ? " pacco" : " pacchi") + " da 500 g";
+  return s;
+}
+
+// ================== FORMATTAZIONE PORZIONI ==================
+function fmtOlio(q) {
+  if (Math.abs(q - 0.33) < 0.05) return "1 cucchiaino di olio";
+  const intero = Math.floor(q), mezzo = q - intero >= 0.5;
+  if (intero === 0 && mezzo) return "mezzo cucchiaio di olio";
+  return intero + (intero === 1 ? " cucchiaio" : " cucchiai") + (mezzo ? " e mezzo" : "") + " di olio";
+}
+function fmtItem([k, q]) {
+  if (k === "olio") return fmtOlio(q);
+  if (k === "uova") return q + (q === 1 ? " uovo" : " uova");
+  if (k === "yogurt") return "1 vasetto di yogurt bianco";
+  if (k === "yogurt_sl") return "1 vasetto di yogurt senza lattosio";
+  if (k === "fette_bisc") return q + " fette biscottate integrali";
+  if (k === "pizza") return "1 pizza";
+  if (k === "yogurt_greco" && q === 30) return "2 cucchiai di yogurt";
+  if (k.startsWith("v:")) return cap(k.slice(2)) + " " + q + "\u00a0g";
+  if (k.startsWith("f:")) return cap(k.slice(2)) + " " + q + "\u00a0g";
+  const f = F[k]; if (!f) return k + " " + q;
+  const u = f[2] || "g";
+  return f[0] + " " + q + (u === "ml" ? "\u00a0ml" : "\u00a0g");
+}
+
+// ================== CUOCI E DIVIDI ==================
+function cuociEDividi(d) {
+  const perKey = {};
+  presentiACena().filter(pid => !saltato(pid, d, "cena")).forEach(pid => {
+    cenaPersona(pid, d).items.forEach(([k, q]) => {
+      if (k === "olio" || k.startsWith("v:") || !F[k]) return;
+      const rep = F[k][1];
+      if (!["carne","pesce","formaggi","latte"].includes(rep) && k !== "pizza") return;
+      if (k === "pizza") return;
+      (perKey[k] = perKey[k] || []).push([pid, q]);
+    });
+  });
+  return Object.entries(perKey).map(([k, arr]) => {
+    const tot = arr.reduce((s, [, q]) => s + q, 0);
+    return {k, tot, arr, fatt: FATTORI[k]};
+  }).sort((a, b) => b.tot - a.tot);
+}
+function cuociInsiemePranzo(d) {
+  const perKey = {};
+  const add = (pid, items) => items.forEach(([k, q]) => {
+    const c = catDi(k); if (!["pasta","riso","cereali","legumi"].includes(c)) return;
+    (perKey[k] = perKey[k] || []).push([pid, q]);
+  });
+  if (attivo("L") && !saltato("L", d, "pranzo")) { const l = pastoLudovica(d, "pranzo"); if (l) add("L", l.items); }
+  attiviFlex().forEach(pid => { const r = risolviScelta(pid, d, "pranzo"); if (r) add(pid, r.items); });
+  return Object.entries(perKey).filter(([, a]) => a.length > 1).map(([k, arr]) => ({k, arr, tot: arr.reduce((s, [, q]) => s + q, 0), fatt: FATTORI[k]}));
+}
+
+// ================== RICERCA ==================
+function norm(s) { return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); }
+function cerca(q) {
+  q = norm(q.trim());
+  if (q.length < 2) return [];
+  const match = k => {
+    if (k.startsWith("f:") || k.startsWith("v:")) return norm(k.slice(2)).includes(q);
+    return (F[k] && norm(F[k][0]).includes(q)) || norm(k).includes(q);
+  };
+  const res = [];
+  const push = (pid, dove, testo) => res.push({pid, dove, testo});
+  // Ludovica
+  LUDOVICA.forEach((g, d) => {
+    ["colazione","spuntino","pranzo","merenda"].forEach(meal => {
+      const m = g[meal]; if (!m) return;
+      const tutte = (m.items || []).concat(m.alts || []);
+      tutte.forEach(([k, qq]) => {
+        if (k === "fruttaL") { Object.entries(qq === 1 ? FRUTTA_L1 : FRUTTA_L2).forEach(([f, gr]) => { if (norm(f).includes(q)) push("L", GIORNI[d] + " · " + PASTI_NOMI[meal], cap(f) + " " + gr + " g"); }); return; }
+        if (match(k)) push("L", GIORNI[d] + " · " + PASTI_NOMI[meal], fmtItem([k, qq]));
+      });
+    });
+    const c = g.cena;
+    if (c.prot && typeof c.prot === "object") Object.entries(c.prot).forEach(([k, qq]) => { if (match(k)) push("L", GIORNI[d] + " · Cena", fmtItem([k, qq])); });
+    if (c.prot === "domenica" && /carne|pesce/.test(q)) push("L", "Domenica · Cena", "Carne o pesce 150 g");
+    if (c.mozz && match("bufala")) push("L", "Venerdì · Cena", "Mozzarella di bufala 150 g");
+    if (c.side) Object.entries(c.side).forEach(([k, qq]) => { if (match(k)) push("L", GIORNI[d] + " · Cena", fmtItem([k, qq])); });
+  });
+  // profili componibili
+  Object.entries(PROFILI).forEach(([pidP, P]) => {
+    const pid = P.persona;
+    if (pid === "V" && pidP === "V_sport") return; // Vincenzo per ora solo rest
+    const scan = (meal, gruppi) => gruppi.forEach(g => {
+      if (!g) return;
+      Object.entries(g).forEach(([k, qq]) => {
+        if (k === "f:*") { if (/frutt/.test(q) || FRUTTA_STAGIONE.some(f => norm(f).includes(q))) push(pid, P.breve + " · " + PASTI_NOMI[meal], "Frutta a piacere " + qq + " g"); return; }
+        if (isCombo(k)) { const parts = parseCombo(k); if (parts.some(([a]) => match(a))) push(pid, P.breve + " · " + PASTI_NOMI[meal], parts.map(fmtItem).join(" + ")); return; }
+        if (match(k)) push(pid, P.breve + " · " + PASTI_NOMI[meal], fmtItem([k, qq]));
+      });
+    });
+    scan("colazione", P.colazione.dolce.concat(P.colazione.salata));
+    scan("spuntino", P.spuntino);
+    scan("pranzo", [P.pranzo.carb, P.pranzo.prot]);
+    scan("merenda", P.merenda);
+    scan("cena", [P.cena.prot, P.cena.side]);
+    if (P.cena.omelette && parseCombo(P.cena.omelette).some(([a]) => match(a))) push(pid, P.breve + " · Cena", "Omelette: " + parseCombo(P.cena.omelette).map(fmtItem).join(" + "));
+    if (P.cena.mozzarella && parseCombo(P.cena.mozzarella).some(([a]) => match(a))) push(pid, P.breve + " · Cena del venerdì", parseCombo(P.cena.mozzarella).map(fmtItem).join(" + "));
+  });
+  return res;
+}
+
+
+// ================== COMPILA A MANO ==================
+const VERDURE_SCELTA = ["zucchine","broccoli","spinaci","finocchi","carote","pomodori","melanzane","peperoni","lattuga","rucola","zucca","cavolfiore","funghi","fagiolini"];
+function risolviMano(c, P) {
+  const pr = P.pranzo;
+  let items = [];
+  if (c.c) {
+    if (!pr.carb) return null;
+    const g = pr.carb[c.c];
+    if (g === undefined) return null;
+    items = items.concat(isCombo(c.c) ? parseCombo(c.c) : [[c.c, g]]);
+  }
+  if (c.p) {
+    const g = pr.prot[c.p];
+    if (g === undefined) return null;
+    items = items.concat(isCombo(c.p) ? parseCombo(c.p) : [[c.p, g]]);
+  }
+  if (!items.length) return null;
+  items.push(["v:" + (c.v || "zucchine"), 200]);
+  items.push(["olio", pr.olio]);
+  const parti = [c.c ? etichettaBreve(c.c) : null, c.p ? etichettaBreve(c.p).toLowerCase() : null].filter(Boolean);
+  return {titolo: cap(parti.join(" con ") + " e " + (c.v || "verdura")), items, mano:true};
+}
+function titoloGruppo(g, i) {
+  const ks = Object.keys(g);
+  if (ks.every(k => k.startsWith("f:"))) return "Frutta";
+  if (ks.some(k => ["latte_sl","latte_ps","latte_veg","yogurt_sl","yogurt_greco","kefir"].includes(k))) return "Latte o yogurt";
+  if (ks.some(k => ["marmellata","miele","acero","nocciolata"].includes(k))) return "Da mettere sopra";
+  if (ks.some(k => ["olive","avocado","frutta_secca","cioccolato","cocco_fresco"].includes(k))) return "Grassi e frutta secca";
+  return i === 0 ? "Base" : "Da aggiungere";
+}
+function gruppiComponi(P, meal, tipo) {
+  if (meal === "colazione" && tipo === "pancake") return [{t:"Da mettere sopra", g:P.colazione.dolce[2]}];
+  return gruppiPasto(P, meal, tipo).map((g, i) => ({t: titoloGruppo(g, i), g}));
+}
+function opzioniGruppo(g) {
+  const out = [];
+  Object.keys(g).forEach(k => {
+    if (k === "f:*") { frutteDelGruppo(g).slice(0, 10).forEach(f => out.push("f:" + f)); return; }
+    out.push(k);
+  });
+  return out;
+}
+function quantitaOpzione(g, k) {
+  const v = voce(g, k);
+  if (!v) return "";
+  return v.map(fmtItem).join(" + ");
+}
+let CP = null;
+function apriComponi(pid, d, meal) {
+  const P = PROFILI[profiloId(pid, d)];
+  if (!P || !slotAttivo(pid, d, meal)) return;
+  const pre = S.scelte[slotKey(pid, d, meal)];
+  if (meal === "pranzo") {
+    CP = {pid, d, meal, c: P.pranzo.carb ? Object.keys(P.pranzo.carb)[0] : null, p: Object.keys(P.pranzo.prot)[0], v: "zucchine"};
+    if (pre && pre.k === "mano") CP = {pid, d, meal, c: pre.c, p: pre.p, v: pre.v || "zucchine"};
+  } else {
+    let tipo = meal === "colazione" ? "dolce" : "snack";
+    if (pre && pre.k === "combo" && pre.tipo) tipo = pre.tipo;
+    CP = {pid, d, meal, tipo, picks: null};
+    CP.picks = (pre && pre.k === "combo" && pre.tipo === tipo && Array.isArray(pre.picks)) ? pre.picks.slice() : null;
+    sistemaPicks();
+  }
+  chiudiSwipe(true);
+  $("#componi").classList.add("on");
+  document.body.classList.add("bloccato");
+  renderComponi();
+}
+function sistemaPicks() {
+  const P = PROFILI[profiloId(CP.pid, CP.d)];
+  const gruppi = gruppiComponi(P, CP.meal, CP.tipo);
+  const vecchi = CP.picks || [];
+  CP.picks = gruppi.map((x, i) => {
+    const opz = opzioniGruppo(x.g);
+    return (vecchi[i] && opz.includes(vecchi[i])) ? vecchi[i] : opz[0];
+  });
+}
+function chiudiComponi() { CP = null; $("#componi").classList.remove("on"); document.body.classList.remove("bloccato"); render(); }
+function sceltaComponi() {
+  if (CP.meal === "pranzo") return {k:"mano", c: CP.c, p: CP.p, v: CP.v};
+  return {k:"combo", tipo: CP.tipo, picks: CP.picks.slice()};
+}
+function anteprimaComponi() {
+  const P = PROFILI[profiloId(CP.pid, CP.d)];
+  const ch = sceltaComponi();
+  return ch.k === "mano" ? risolviMano(ch, P) : risolviCombo(ch, P, CP.meal);
+}
+function renderComponi() {
+  const box = $("#componi");
+  if (!CP) { box.innerHTML = ""; return; }
+  const P = PROFILI[profiloId(CP.pid, CP.d)];
+  const p = persona(CP.pid);
+  const res = anteprimaComponi();
+  let h = `<div class="cp-box"><div class="cp-top"><button class="btn ghost small" data-cp="chiudi">Chiudi</button><span>Compila il pasto</span></div>
+    <p class="cp-chi">${dot(CP.pid, true)}<b>${esc(p.nome)}</b> · ${PASTI_NOMI[CP.meal]} di ${GIORNI[CP.d].toLowerCase()} · ${esc(nomeProfilo(CP.pid, CP.d))}</p>
+    <p class="hint">Le quantità le mette l'app, seguendo la dieta. Tu scegli che cosa.</p>`;
+
+  if (CP.meal === "colazione") {
+    const tipi = [["dolce","Dolce"],["salata","Salata"],["pancake","Pancake"]];
+    h += `<div class="seg wide" role="group" aria-label="Tipo di colazione">${tipi.map(([v, n]) => `<button class="${CP.tipo === v ? "on" : ""}" data-cp="tipo" data-v="${v}">${n}</button>`).join("")}</div>`;
+  }
+
+  if (CP.meal === "pranzo") {
+    if (P.pranzo.carb) {
+      h += gruppoHtml("Pasta, riso, pane o legumi", opzioniGruppo(P.pranzo.carb).map(k => ({k, q: quantitaOpzione(P.pranzo.carb, k), on: CP.c === k, act:"carb"})).concat([{k:"", q:"Nessuno", on: !CP.c, act:"carb", nome:"Salta"}]));
+    } else {
+      h += `<p class="hint">Giornata senza carboidrati: a pranzo niente pasta, riso o pane.</p>`;
+    }
+    h += gruppoHtml("Secondo", opzioniGruppo(P.pranzo.prot).map(k => ({k, q: quantitaOpzione(P.pranzo.prot, k), on: CP.p === k, act:"prot"})).concat([{k:"", q:"Nessuno", on: !CP.p, act:"prot", nome:"Salta"}]));
+    h += gruppoHtml("Verdura, 200 g", VERDURE_SCELTA.map(v => ({k:v, q:"200 g", on: CP.v === v, act:"verd"})));
+  } else {
+    gruppiComponi(P, CP.meal, CP.tipo).forEach((x, i) => {
+      h += gruppoHtml(x.t, opzioniGruppo(x.g).map(k => ({k, q: quantitaOpzione(x.g, k), on: CP.picks[i] === k, act:"pick", i})));
+    });
+  }
+
+  h += `<div class="cp-fine"><div class="cp-riepilogo">${res ? `<b>${esc(res.titolo)}</b><ul>${res.items.map(it => `<li>${esc(fmtItem(it))}</li>`).join("")}</ul>` : `<b>Manca qualcosa</b><ul><li>Scegli almeno una voce.</li></ul>`}</div>
+    <button class="btn primary" data-cp="salva" ${res ? "" : "disabled"}>Metti nel piano</button></div></div>`;
+  box.innerHTML = h;
+}
+function gruppoHtml(titolo, opzioni) {
+  return `<div class="cp-gruppo"><h3>${esc(titolo)}</h3><div class="cp-opz">${opzioni.map(o =>
+    `<button class="chip${o.on ? " on" : ""}" data-cp="${o.act}" data-k="${esc(o.k)}"${o.i !== undefined ? ` data-i="${o.i}"` : ""}>${esc(o.nome || etichettaBreve(o.k))}<small>${esc(o.q)}</small></button>`).join("")}</div></div>`;
+}
+function onComponi(e) {
+  const b = e.target.closest("[data-cp]");
+  if (!b || !CP) return;
+  const a = b.dataset.cp, k = b.dataset.k;
+  if (a === "chiudi") { chiudiComponi(); return; }
+  if (a === "tipo") { CP.tipo = b.dataset.v; sistemaPicks(); renderComponi(); return; }
+  if (a === "pick") { CP.picks[Number(b.dataset.i)] = k; renderComponi(); return; }
+  if (a === "carb") { CP.c = k || null; renderComponi(); return; }
+  if (a === "prot") { CP.p = k || null; renderComponi(); return; }
+  if (a === "verd") { CP.v = k; renderComponi(); return; }
+  if (a === "salva") {
+    const res = anteprimaComponi();
+    if (!res) return;
+    S.scelte[slotKey(CP.pid, CP.d, CP.meal)] = sceltaComponi();
+    S.confermati[slotKey(CP.pid, CP.d, CP.meal)] = true;
+    const nome = persona(CP.pid).nome;
+    salva();
+    chiudiComponi();
+    toast("Salvato per " + nome);
+  }
+}
+
+// ================== INTERFACCIA ==================
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const oggiIdx = () => (new Date().getDay() + 6) % 7;
+const ui = {tab:"oggi", day: oggiIdx(), cercaQ:"", ricSeg:"cene", aperti:{}, tabPrec:"oggi"};
+
+function persona(pid) {
+  const p = PERSONE.find(x => x.id === pid);
+  return pid === "Q" ? Object.assign({}, p, {nome: S.q.nome || "5ª persona"}) : p;
+}
+function dot(pid, big) { return `<span class="dot${big ? " big" : ""}" style="background:${persona(pid).colore}"></span>`; }
+function dataGiorno(d) {
+  const [y, m, dd] = S.week.split("-").map(Number);
+  const x = new Date(y, m - 1, dd + d);
+  return x;
+}
+function settimanaCorrente() { return isoDate(lunediDi(new Date())) === S.week; }
+function mese(d) { return d.toLocaleDateString("it-IT", {day:"numeric", month:"long"}); }
+
+function toast(msg) {
+  const t = $("#toast"); t.textContent = msg; t.classList.add("on");
+  clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove("on"), 2200);
+}
+function aggiorna() { salva(); render(); }
+
+// ---------- BANNER NUOVA SETTIMANA ----------
+function bannerSettimana() {
+  if (settimanaCorrente()) return "";
+  return `<div class="banner"><p>È iniziata una nuova settimana. Vuoi prepararla? I gusti imparati e l'agenda restano, i pasti scelti e le spunte della spesa ripartono da zero.</p>
+    <button class="btn primary" data-act="nuova-settimana">Prepara la nuova settimana</button></div>`;
+}
+
+// ================== OGGI ==================
+function pastoDelMomento() {
+  const n = new Date(); const o = n.getHours() + n.getMinutes() / 60;
+  if (o < 9.5) return "colazione";
+  if (o < 11.5) return "spuntino";
+  if (o < 14.5) return "pranzo";
+  if (o < 18) return "merenda";
+  return "cena";
+}
+function renderAdesso(d) {
+  if (!settimanaCorrente() || d !== oggiIdx()) return "";
+  const meal = pastoDelMomento();
+  if (meal === "cena") return "";
+  const righe = attiviCasa().map(pid => {
+    let testo;
+    if (saltato(pid, d, meal)) testo = "Lo salta";
+    else if (pid === "L") { const p = pastoLudovica(d, meal); if (!p) return ""; testo = p.titolo; }
+    else if (slotAttivo(pid, d, meal)) { const r = risolviScelta(pid, d, meal); testo = r ? r.titolo : "Ancora da sistemare"; }
+    else testo = "Libero";
+    return `<li class="${saltato(pid, d, meal) ? "saltato" : ""}">${dot(pid)}<div><b>${esc(persona(pid).nome)}</b><span>${esc(testo)}</span></div></li>`;
+  }).join("");
+  if (!righe.trim()) return "";
+  return `<section class="card adesso"><p class="kicker">Adesso tocca a</p><h2>${PASTI_NOMI[meal]}</h2><ul class="porzioni">${righe}</ul></section>`;
+}
+function renderOggi() {
+  const d = ui.day;
+  let h = bannerSettimana();
+  h += `<div class="daystrip" role="tablist" aria-label="Giorno">` + GIORNI_BREVI.map((g, i) => {
+    const dt = dataGiorno(i);
+    const oggi = settimanaCorrente() && i === oggiIdx();
+    return `<button role="tab" class="daychip${i === d ? " on" : ""}" aria-selected="${i === d}" data-act="giorno" data-d="${i}"><span>${g}</span><b>${dt.getDate()}</b>${oggi ? `<i aria-label="oggi"></i>` : ""}</button>`;
+  }).join("") + `</div>`;
+
+  h += renderAdesso(d);
+  h += renderCena(d);
+  h += renderInsiemePranzo(d);
+  attiviCasa().forEach(pid => { h += renderPersonaGiorno(pid, d); });
+  return h;
+}
+
+function renderCena(d) {
+  const c = CENE[d];
+  const presenti = presentiACena();
+  let h = `<section class="cena" aria-labelledby="cena-t">
+    <div class="tavola" aria-hidden="true">${presenti.map(p => `<span style="background:${persona(p).colore}"></span>`).join("")}</div>
+    <p class="kicker">${GIORNI[d]} sera, per tutti</p>
+    <h2 id="cena-t" class="piatto">${esc(nomeCena(d))}</h2>`;
+  const opz = OPZIONI_CENA[d];
+  if (opz.length > 1) {
+    h += `<p class="kicker scelta-cena">${d === 6 ? "Carne o pesce a scelta, uguale per tutti" : "Le alternative della dieta: la scelta vale per tutti"}</p>
+      <div class="chips" role="group" aria-label="Scelta della cena">${opz.map(k => `<button class="chip${S.cena[d] === k ? " on" : ""}" data-act="cena-opt" data-d="${d}" data-v="${k}">${esc(nomeOpzioneCena(k))}</button>`).join("")}</div>`;
+  }
+  h += `<ul class="porzioni">` + presenti.map(pid => {
+    if (saltato(pid, d, "cena")) return `<li class="saltato">${dot(pid)}<div><b>${esc(persona(pid).nome)}</b><span>Stasera non cena a casa</span>
+      <button class="link" data-act="rimetti" data-p="${pid}" data-d="${d}" data-m="cena">Rimettilo</button></div></li>`;
+    const r = cenaPersona(pid, d);
+    const alt = r.titolo !== nomeCena(d) ? `<span class="nota">${esc(r.titolo)}</span>` : "";
+    return `<li>${dot(pid)}<div><b>${esc(persona(pid).nome)}</b>${alt}<span>${r.items.map(fmtItem).map(esc).join(" · ")}</span>
+      <button class="link" data-act="salta" data-p="${pid}" data-d="${d}" data-m="cena">Non c'è</button></div></li>`;
+  }).join("") + `</ul>`;
+  h += `<button class="link sposta" data-act="sposta-sera" data-d="${d}">Metti un'altra cena stasera</button>`;
+  if (seraDi(d) === 5) {
+    if (attivo("M") && profiloId("M", d) === "M_low") {
+    h += `<div class="avviso"><p>${GIORNI[d]} per Tina è senza pasta e pane: la pizza va chiarita con il nutrizionista.</p>
+      <div class="seg small" role="group" aria-label="Serata pizza di Tina">
+        <button class="${S.satM === "pizza" ? "on" : ""}" data-act="satM" data-v="pizza">Tina mangia la pizza</button>
+        <button class="${S.satM === "low" ? "on" : ""}" data-act="satM" data-v="low">Tina salta la pizza</button></div></div>`;
+    }
+  } else {
+    const cd = cuociEDividi(d);
+    if (cd.length) {
+      h += `<div class="dividi"><h3>Cuoci e dividi</h3>` + cd.map(x => {
+        const nome = F[x.k][0].toLowerCase();
+        if (x.arr.length === 1) return "";
+        const cotto = x.fatt ? Math.round(x.tot * x.fatt) : null;
+        let righe = x.arr.map(([pid, q]) => {
+          const val = cotto ? Math.round(q * x.fatt) + " g" : Math.round(q / x.tot * 100) + "%";
+          return `<li>${dot(pid)}${esc(persona(pid).nome)} <b>${val}</b></li>`;
+        }).join("");
+        const tipo = ["bufala","mozzarella","mozzarella_sl"].includes(x.k);
+        if (tipo) return `<p>Mozzarella in tutto: <b>${x.tot} g</b>.</p>`;
+        return `<p>Cuoci insieme <b>${numIt(x.tot, 0)} g</b> di ${esc(nome)} a crudo.${cotto ? ` Da cotto saranno circa ${numIt(cotto, 0)} g: dividili così.` : ` Pesalo da cotto e dividilo in queste proporzioni.`}</p><ul class="righe">${righe}</ul>`;
+      }).join("") + `</div>`;
+    }
+  }
+  return h + `</section>`;
+}
+
+function renderInsiemePranzo(d) {
+  const g = cuociInsiemePranzo(d);
+  if (!g.length) return "";
+  return `<section class="card insieme"><h3>A pranzo si può cuocere insieme</h3>` + g.map(x => {
+    const cotto = x.fatt ? Math.round(x.tot * x.fatt) : null;
+    return `<p><b>${numIt(x.tot, 0)} g</b> di ${esc(F[x.k][0].toLowerCase())} a crudo${cotto ? `, circa ${numIt(cotto, 0)} g da cotto` : ""}.</p><ul class="righe">` +
+      x.arr.map(([pid, q]) => `<li>${dot(pid)}${esc(persona(pid).nome)} <b>${cotto ? Math.round(q * x.fatt) + " g cotti" : q + " g crudi"}</b></li>`).join("") + `</ul>`;
+  }).join("") + `</section>`;
+}
+
+function renderPersonaGiorno(pid, d) {
+  const p = persona(pid);
+  const pasti = pastiDelGiorno(pid, d);
+  const pranzo = pasti.find(x => x.meal === "pranzo");
+  let riassunto = nomeProfilo(pid, d);
+  if (pranzo) {
+    if (pranzo.saltato) riassunto = "Pranzo saltato";
+    else if (pranzo.libero) riassunto = pranzo.titolo;
+    else if (pranzo.titolo) riassunto = "Pranzo: " + pranzo.titolo;
+    else riassunto = "Pranzo da sistemare";
+  }
+  let badge = `<span class="badge">${esc(nomeProfilo(pid, d))}</span>`;
+  if (pid === "A" || pid === "V" || (pid === "M" && d !== 6)) badge = `<button class="badge btnbadge" data-act="profilo" data-p="${pid}" data-d="${d}">${esc(nomeProfilo(pid, d))}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg></button>`;
+  const pidProf = profiloId(pid, d);
+  let h = `<details class="card persona" style="--pc:${p.colore}" data-pid="${pid}"${ui.aperti[pid] ? " open" : ""}>
+    <summary>${dot(pid, true)}<span class="pn"><b>${esc(p.nome)}</b><small>${esc(riassunto)}</small></span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg></summary>
+    <div class="persona-corpo"><p class="riga-prof">Giornata: ${badge}</p>`;
+  if (pidProf && PROFILI[pidProf] && PROFILI[pidProf].note) h += `<p class="nota-prof">${esc(PROFILI[pidProf].note)}</p>`;
+  h += `<ul class="pasti">`;
+  pasti.forEach(x => {
+    const nome = x.meal === "libera" ? "Oggi" : PASTI_NOMI[x.meal];
+    const salta = `<button class="link" data-act="salta" data-p="${pid}" data-d="${d}" data-m="${x.meal}">Salta</button>`;
+    if (x.saltato) {
+      h += `<li class="saltato"><span class="pasto">${nome}</span><div><b>Saltato</b>
+        <button class="link" data-act="rimetti" data-p="${pid}" data-d="${d}" data-m="${x.meal}">Rimettilo</button></div></li>`;
+      return;
+    }
+    if (x.libero) { h += `<li class="libero"><span class="pasto">${nome}</span><div><b>${esc(x.titolo)}</b></div></li>`; return; }
+    if (x.fisso) {
+      const fr = x.items.find(([k]) => k.startsWith("f:"));
+      h += `<li><span class="pasto">${nome}</span><div><b>${esc(x.titolo)}</b>${fr ? `<span>Frutta proposta: ${esc(fmtItem(fr).toLowerCase())}</span>` : ""}${x.idea ? `<span class="idea">Idea: ${esc(x.idea)}</span>` : ""}
+        <span class="azioni-pasto">${salta}</span></div></li>`;
+      return;
+    }
+    if (x.stato === "ok") {
+      h += `<li><span class="pasto">${nome}</span><div><b>${esc(x.titolo)}</b><span>${x.items.map(fmtItem).map(esc).join(" · ")}</span>
+        <span class="azioni-pasto"><button class="link" data-act="swipe-uno" data-p="${pid}" data-d="${d}" data-m="${x.meal}">Cambia</button>
+        <button class="link" data-act="componi" data-p="${pid}" data-d="${d}" data-m="${x.meal}">Compila tu</button>${salta}</span></div></li>`;
+    } else {
+      h += `<li class="vuoto"><span class="pasto">${nome}</span><div><span>Da sistemare: è cambiato il tipo di giornata</span>
+        <span class="azioni-pasto"><button class="link" data-act="swipe-uno" data-p="${pid}" data-d="${d}" data-m="${x.meal}">Scegli</button>
+        <button class="link" data-act="componi" data-p="${pid}" data-d="${d}" data-m="${x.meal}">Compila tu</button>${salta}</span></div></li>`;
+    }
+  });
+  return h + `</ul></div></details>`;
+}
+
+// ================== SETTIMANA ==================
+function renderSettimana() {
+  const t = totaliSlot();
+  const pct = t.tot ? Math.round(t.miei / t.tot * 100) : 100;
+  let h = bannerSettimana();
+  h += `<section class="card hero-sett">
+    <h2>I pasti della settimana</h2>
+    <p class="big">${t.miei === 0 ? "Già pronti tutti" : t.miei + " scelti da te su " + t.tot}</p>
+    <div class="bar" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"><span style="width:${pct}%"></span></div>
+    <ul class="stato-persone">${attiviFlex().map(pid => `<li>${dot(pid)}${esc(persona(pid).nome)} <b>${t.per[pid][0]} su ${t.per[pid][1]}</b></li>`).join("")}</ul>
+    <div class="azioni">
+      <button class="btn primary" data-act="swipe" data-f="pranzo">Guarda i pranzi</button>
+      <button class="btn" data-act="swipe" data-f="colazione">Guarda le colazioni</button>
+      <button class="btn" data-act="swipe" data-f="snack">Guarda spuntini e merende</button>
+    </div>
+    <p class="hint">La settimana è già compilata dall'app, seguendo le diete e le frequenze. Qui cambi quello che non ti convince: scorri a destra per tenere, a sinistra per vedere un'altra idea.</p>
+  </section>`;
+
+  // agenda
+  const lab = {rest:"Senza sport", corta:"Bici corta", lunga:"Bici lunga", sport:"Palestra"};
+  const labLungo = {rest:"nessuno sport", corta:"bici corta o tennis", lunga:"bici lunga", sport:"palestra"};
+  const colonne = ["A","V","M"].filter(attivo);
+  if (colonne.length) {
+    const gt = `grid-template-columns:40px repeat(${colonne.length}, minmax(0,1fr))`;
+    const cella = (pid, d) => {
+      if (pid === "A") return `<button class="ag c-${S.agendaA[d]}" data-act="ag" data-p="A" data-d="${d}" aria-label="Antonio ${GIORNI[d]}: ${labLungo[S.agendaA[d]]}">${lab[S.agendaA[d]]}</button>`;
+      if (pid === "V") return `<button class="ag c-${S.agendaV[d]} v" data-act="ag" data-p="V" data-d="${d}" aria-label="Vincenzo ${GIORNI[d]}: ${labLungo[S.agendaV[d]]}">${lab[S.agendaV[d]]}</button>`;
+      if (d === 6) return `<span class="ag c-libera">Libera</span>`;
+      if (d === 0 || d === 5) return `<span class="ag c-low">Senza pane</span>`;
+      return `<button class="ag ${S.mLow[d] ? "c-low" : "c-medi"}" data-act="mlow" data-d="${d}" aria-label="Tina ${GIORNI[d]}: ${S.mLow[d] ? "senza pasta e pane" : "giorno normale"}">${S.mLow[d] ? "Senza pane" : "Normale"}</button>`;
+    };
+    h += `<section class="card"><h2>Agenda della settimana</h2>
+      <p class="hint">Tocca una casella per cambiarla. Le porzioni si aggiornano da sole.</p>
+      <div class="agenda" role="table" aria-label="Agenda">
+        <div class="ag-row head" role="row" style="${gt}"><span></span>${colonne.map(pid => `<span role="columnheader">${dot(pid)}${esc(persona(pid).nome)}</span>`).join("")}</div>
+        ${[0,1,2,3,4,5,6].map(d => `<div class="ag-row" role="row" style="${gt}"><span class="ag-g">${GIORNI_BREVI[d]}</span>${colonne.map(pid => cella(pid, d)).join("")}</div>`).join("")}
+      </div>
+      ${attivo("M") ? `<p class="hint">Per Tina lunedì e sabato sono sempre senza pasta e pane. Dopo uno sgarro tocca il giorno dopo per toglierle pasta e pane.</p>` : ""}
+    </section>`;
+  }
+
+  return h;
+}
+
+function renderImpostazioni() {
+  let h = "";
+  // chi c'è a tavola
+  h += `<section class="card"><h2>Chi c'è a tavola</h2>
+    <p class="hint">Spegni una persona quando non mangia più a casa: sparisce dai pasti, dalle proposte e dalla spesa. Si riaccende quando torna, senza perdere niente.</p>
+    ${["L","M","A","V"].map(pid => `<label class="riga-imp"><span>${dot(pid)}${esc(persona(pid).nome)}</span><input type="checkbox" data-act="attivo" data-p="${pid}" ${attivo(pid) ? "checked" : ""}></label>`).join("")}
+    <label class="riga-imp"><span>${dot("Q")}Un'altra persona a cena</span><input type="checkbox" data-act="q-on" ${S.q.on ? "checked" : ""}></label>
+    ${S.q.on ? `<label class="campo"><span>Nome</span><input type="text" value="${esc(S.q.nome)}" data-act="q-nome" maxlength="20"></label>` : ""}
+    ${!attivo("L") ? `<p class="hint">Le cene restano quelle del calendario di Ludovica: è la traccia su cui è costruita la settimana di tutti.</p>` : ""}
+  </section>`;
+
+  // diete
+  const diete = Object.keys(S.diete || {}).sort();
+  h += `<section class="card"><h2>Diete</h2>
+    <p class="hint">Quando il nutrizionista cambia una dieta, si carica qui il file e l'app rifà porzioni, proposte e lista della spesa.</p>
+    ${diete.length ? diete.map(id => `<div class="dieta-riga"><div><b>${esc(S.diete[id].nome)}</b><small>caricata il ${esc(dataItaliana(S.diete[id].data))} · ${Object.keys(S.diete[id].profili || {}).length} profili</small></div><button class="link" data-act="dieta-via" data-id="${esc(id)}">Togli</button></div>`).join("") : `<p class="hint">Per ora ci sono le diete di partenza, quelle del Dott. Solito.</p>`}
+    <label class="btn primary file"><span>Carica una dieta nuova</span><input type="file" accept=".json,application/json" data-act="import-dieta"></label>
+    <button class="btn ghost" data-act="esporta">Salva una copia dei dati</button>
+    <details class="mini"><summary>Come si prepara il file</summary>
+      <p>Il file è un <b>.json</b> che contiene le grammature di una o più giornate tipo. Il modo più semplice: manda il PDF nuovo del nutrizionista a chi ti ha preparato l'app e ricevi il file già pronto da caricare qui.</p>
+      <p>La forma è questa, e le chiavi (<b>M_medi</b>, <b>A_rest</b>, <b>V_sport</b>…) dicono quale giornata tipo sostituire:</p>
+      <pre>{ "tipo": "dieta", "nome": "Antonio, gennaio", "profili": { "A_rest": { … } } }</pre>
+      <p>Lo stesso pulsante ricarica anche una copia dei dati salvata da qui.</p>
+    </details>
+  </section>`;
+
+  // altro
+  h += `<section class="card"><h2>Altro</h2>
+    <label class="riga-imp"><span>Nella spesa conta per Antonio la porzione di cena più abbondante, nel caso cambi programma</span><input type="checkbox" data-act="maxdad" ${S.maxDad ? "checked" : ""}></label>
+    <button class="btn ghost" data-act="nuova-settimana">Ricomincia la settimana da capo</button>
+  </section>`;
+  return h;
+}
+
+// ================== SPESA ==================
+function renderSpesa() {
+  const r = S.spesa.range;
+  const lista = listaSpesa(r);
+  const t = totaliSlot();
+  let h = `<div class="seg wide" role="group" aria-label="Periodo">
+    <button class="${r === "tutto" ? "on" : ""}" data-act="range" data-v="tutto">Settimana</button>
+    <button class="${r === "a" ? "on" : ""}" data-act="range" data-v="a">Lun–Mer</button>
+    <button class="${r === "b" ? "on" : ""}" data-act="range" data-v="b">Gio–Dom</button></div>`;
+  if (t.ok < t.tot) h += `<div class="avviso"><p>${t.tot - t.ok === 1 ? "Un pasto è" : (t.tot - t.ok) + " pasti sono"} da rifare, perché è cambiato il tipo di giornata.</p><button class="btn small" data-act="auto">Sistema in automatico</button></div>`;
+  const chiavi = Object.keys(lista);
+  const inCasa = chiavi.filter(k => S.spesa.casa[k]);
+  const daComprare = chiavi.filter(k => !S.spesa.casa[k]);
+  const nFatti = daComprare.filter(k => S.spesa.checked[k]).length;
+  h += `<p class="conta">${nFatti} su ${daComprare.length} nel carrello</p>
+    <p class="legenda">I pallini dicono per chi è: ${presentiACena().map(p => `<span>${dot(p)}${esc(persona(p).nome)}</span>`).join("")}</p>`;
+  REPARTI_ORDINE.forEach(rep => {
+    const ks = daComprare.filter(k => repartoDi(k) === rep).sort((a, b) => nomeSpesa(a).localeCompare(nomeSpesa(b), "it"));
+    if (!ks.length) return;
+    h += `<section class="reparto"><h3>${REPARTI[rep]}</h3><ul>` + ks.map(k => rigaSpesa(k, lista[k], false)).join("") + `</ul></section>`;
+  });
+  if (inCasa.length) h += `<details class="reparto casa"><summary>Già in casa (${inCasa.length})</summary><ul>` + inCasa.map(k => rigaSpesa(k, lista[k], true)).join("") + `</ul></details>`;
+  h += `<section class="reparto lista-libera"><h3>La mia lista</h3>
+    <p class="hint">Quello che serve oltre alle diete: detersivi, caffè, il pane per la vicina. Entra anche nella lista che invii.</p>
+    <div class="aggiungi"><input type="text" id="extra-txt" placeholder="Scrivi qui e aggiungi" maxlength="60" autocomplete="off" aria-label="Cosa aggiungere alla lista">
+      <button class="btn small" data-act="extra-add">Aggiungi</button></div>
+    ${S.spesa.extra.length ? `<ul>` + S.spesa.extra.map((x, i) => `<li class="${x.ok ? "fatto" : ""}">
+      <button class="check" role="checkbox" aria-checked="${!!x.ok}" data-act="extra-ok" data-i="${i}" aria-label="${esc(x.t)}"></button>
+      <div class="sp-testo"><b>${esc(x.t)}</b></div>
+      <button class="link" data-act="extra-via" data-i="${i}">Togli</button></li>`).join("") + `</ul>` : `<p class="hint">Ancora niente qui dentro.</p>`}
+  </section>`;
+  h += `<p class="hint">Sono incluse le cene di tutti, i pasti di Ludovica e i pasti scelti per gli altri. Il pranzo libero della domenica non è in lista.</p>
+    <div class="azioni"><button class="btn primary" data-act="condividi">Invia la lista</button>
+    <button class="btn ghost" data-act="reset-spunte">Togli tutte le spunte</button></div>`;
+  return h;
+}
+function rigaSpesa(k, v, casa) {
+  const on = S.spesa.checked[k];
+  const chi = [...v.chi].sort((a, b) => "LMAVQ".indexOf(a) - "LMAVQ".indexOf(b)).map(p => dot(p)).join("");
+  return `<li class="${on && !casa ? "fatto" : ""}">
+    ${casa ? "" : `<button class="check" role="checkbox" aria-checked="${!!on}" data-act="check" data-k="${esc(k)}" aria-label="${esc(nomeSpesa(k))}"></button>`}
+    <div class="sp-testo"><b>${esc(nomeSpesa(k))}</b><span>${esc(qtaSpesa(k, v.q))}<span class="chi" aria-hidden="true">${chi}</span></span></div>
+    <button class="link" data-act="casa" data-k="${esc(k)}">${casa ? "Da comprare" : "Ce l'ho"}</button></li>`;
+}
+function testoLista() {
+  const lista = listaSpesa(S.spesa.range);
+  let t = "Lista della spesa\n";
+  REPARTI_ORDINE.forEach(rep => {
+    const ks = Object.keys(lista).filter(k => repartoDi(k) === rep && !S.spesa.casa[k] && !S.spesa.checked[k]).sort((a, b) => nomeSpesa(a).localeCompare(nomeSpesa(b), "it"));
+    if (!ks.length) return;
+    t += "\n" + REPARTI[rep] + "\n" + ks.map(k => "- " + nomeSpesa(k) + ": " + qtaSpesa(k, lista[k].q)).join("\n") + "\n";
+  });
+  const extra = S.spesa.extra.filter(x => !x.ok);
+  if (extra.length) t += "\nAltro\n" + extra.map(x => "- " + x.t).join("\n") + "\n";
+  return t;
+}
+
+// ================== CERCA ==================
+const CHIPS_CERCA = ["pasta","riso","pollo","tonno","mozzarella","frutta secca","pane","uova","ceci"];
+function renderCerca() {
+  let h = `<label class="cerca"><span class="sr">Cerca un alimento</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+    <input id="q" type="search" placeholder="Scrivi un alimento, per esempio pasta" value="${esc(ui.cercaQ)}" autocomplete="off" enterkeyhint="search"></label>
+    <div class="chips">${CHIPS_CERCA.map(c => `<button class="chip${ui.cercaQ === c ? " on" : ""}" data-act="chip-cerca" data-v="${c}">${c}</button>`).join("")}</div>
+    <div id="risultati">${risultatiHtml()}</div>`;
+
+  h += `<details class="card blocco-cons"><summary><b>Le ricette delle cene</b></summary><div class="cons-corpo">`;
+  [0,1,2,3,4,5,6].forEach(d => {
+    const s = seraDi(d);
+    const k = CENE[s].pizza ? "pizza" : cenaMozz(d) ? "mozz" : proteinaCena(d);
+    h += `<section class="ricetta"><p class="kicker">${GIORNI[d]}</p><h3>${esc(nomeCena(d))}</h3><p>${esc(RICETTE_CENE[k] || "Alla piastra o al forno, con verdure di stagione. Olio a crudo.")}</p>
+      <button class="link" data-act="vai-giorno" data-d="${d}">Vedi le porzioni</button></section>`;
+  });
+  h += `</div></details>`;
+
+  h += `<details class="card blocco-cons"><summary><b>Le idee per i pranzi</b></summary><div class="cons-corpo">
+    <p class="hint">I piatti che compaiono nelle carte. Le quantità cambiano da persona a persona.</p>`;
+  PIATTI.forEach(t => {
+    const chi = [];
+    [["M",["M_medi","M_low"]],["A",["A_lunga","A_corta","A_rest"]],["V",["V_rest"]]].filter(([pid]) => attivo(pid)).forEach(([pid, ps]) => { if (ps.some(x => risolviPiatto(t, PROFILI[x]))) chi.push(pid); });
+    if (!chi.length) return;
+    h += `<section class="ricetta"><h3>${esc(t.n)}</h3>${t.fav === "A" ? `<p class="fav">Uno dei preferiti di Antonio</p>` : ""}${t.c === null ? `<p class="fav">Per i giorni senza pasta e pane</p>` : ""}
+      <p>${esc(t.r)}</p><p class="chi-va">Va bene per ${chi.map(x => dot(x) + esc(persona(x).nome)).join(", ")}</p></section>`;
+  });
+  h += `</div></details>`;
+
+  h += `<details class="card blocco-cons"><summary><b>Tabelle e regole</b></summary><div class="cons-corpo">
+    <h3>Da crudo a cotto</h3>
+    <label class="campo"><span>Alimento</span><select id="conv-a">${TABELLA_CONV.map(([n, f], i) => `<option value="${i}">${esc(n)}</option>`).join("")}</select></label>
+    <div class="conv"><label class="campo"><span>Crudo (g)</span><input id="conv-c" type="number" inputmode="numeric" value="100"></label>
+    <label class="campo"><span>Cotto (g)</span><input id="conv-k" type="number" inputmode="numeric" value="200"></label></div>
+    <p class="hint">Scrivi in una delle due caselle: l'altra si calcola da sola.</p>
+    <h3>Verdure ammesse</h3><p>${esc(VERDURE_AMMESSE)}.</p>
+    <h3>Regole generali</h3><ul class="regole">${REGOLE.map(r => `<li>${esc(r)}</li>`).join("")}</ul>
+    <p class="hint">Nelle diete "low carb" sono i giorni che qui chiamiamo senza pasta e pane; "rest" sono i giorni senza sport.</p>
+  </div></details>`;
+  return h;
+}
+function risultatiHtml() {
+
+  if (ui.cercaQ.trim().length < 2) return `<p class="hint">Vedrai le grammature di tutti, pasto per pasto. Puoi anche dettare con il microfono della tastiera.</p>`;
+  const res = cerca(ui.cercaQ);
+  if (!res.length) return `<p class="hint">Nessuna dieta prevede "${esc(ui.cercaQ)}". Prova con un nome più semplice, per esempio "riso" invece di "risotto".</p>`;
+  let h = "";
+  attiviCasa().forEach(pid => {
+    const r = res.filter(x => x.pid === pid);
+    if (!r.length) return;
+    // raggruppa righe uguali
+    const vis = new Map();
+    r.forEach(x => { if (!vis.has(x.dove)) vis.set(x.dove, []); const a = vis.get(x.dove); if (!a.includes(x.testo)) a.push(x.testo); });
+    h += `<section class="card risultato" style="--pc:${persona(pid).colore}"><header>${dot(pid, true)}<h3>${esc(persona(pid).nome)}</h3></header><ul>` +
+      [...vis.entries()].map(([dove, t]) => `<li><span class="dove">${esc(dove)}</span>${t.map(x => `<b>${esc(x)}</b>`).join("")}</li>`).join("") + `</ul>` +
+      (vis.size > 1 || [...vis.values()].some(t => t.length > 1) ? `<p class="hint">Le alternative dello stesso pasto sono da scegliere l'una o l'altra.</p>` : "") + `</section>`;
+  });
+  return h;
+}
+
+// ================== RICETTE ==================
+// ================== RENDER PRINCIPALE ==================
+function render() {
+  const v = $("#view");
+  const titoli = {oggi:"Oggi", settimana:"Settimana", spesa:"Lista della spesa", cerca:"Cerca e ricette", impostazioni:"Impostazioni"};
+  $("#titolo").textContent = titoli[ui.tab] || titoli.oggi;
+  $("#sottotitolo").textContent = "Settimana dal " + mese(dataGiorno(0));
+  const viste = {oggi:renderOggi, settimana:renderSettimana, spesa:renderSpesa, cerca:renderCerca, impostazioni:renderImpostazioni};
+  if (!viste[ui.tab]) ui.tab = "oggi";
+  v.innerHTML = viste[ui.tab]();
+  document.querySelectorAll(".icona").forEach(b => { const on = b.dataset.v === ui.tab; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on ? "true" : "false"); });
+  document.querySelectorAll(".tab").forEach(b => { const on = b.dataset.tab === ui.tab; b.classList.toggle("on", on); b.setAttribute("aria-current", on ? "page" : "false"); });
+  if (ui.tab === "cerca") {
+    const q = $("#q");
+    q.addEventListener("input", () => { ui.cercaQ = q.value; $("#risultati").innerHTML = risultatiHtml(); document.querySelectorAll('[data-act="chip-cerca"]').forEach(c => c.classList.toggle("on", c.dataset.v === ui.cercaQ)); });
+  }
+  if (ui.tab === "cerca" && $("#conv-a") && $("#conv-c") && $("#conv-k")) {
+    const a = $("#conv-a"), c = $("#conv-c"), k = $("#conv-k");
+    const f = () => (TABELLA_CONV[Number(a.value)] || TABELLA_CONV[0])[1];
+    const daCrudo = () => { k.value = Math.round((Number(c.value) || 0) * f()); };
+    a.addEventListener("change", daCrudo); c.addEventListener("input", daCrudo);
+    k.addEventListener("input", () => { c.value = Math.round((Number(k.value) || 0) / f()); });
+    daCrudo();
+  }
+}
+
+// ================== FOGLIO DI SCELTA ==================
+function apriFoglio(titolo, opzioni, onPick) {
+  const s = $("#sheet");
+  s.innerHTML = `<div class="sheet-box" role="dialog" aria-modal="true" aria-labelledby="sheet-t"><h2 id="sheet-t">${esc(titolo)}</h2>
+    ${opzioni.map((o, i) => `<button class="opt${o.on ? " on" : ""}" data-i="${i}"><b>${esc(o.t)}</b>${o.s ? `<span>${esc(o.s)}</span>` : ""}</button>`).join("")}
+    <button class="btn ghost" data-close>Annulla</button></div>`;
+  s.classList.add("on");
+  s.onclick = e => {
+    const b = e.target.closest("button");
+    if (e.target === s || (b && b.hasAttribute("data-close"))) { chiudiFoglio(); return; }
+    if (b && b.dataset.i !== undefined) { chiudiFoglio(); onPick(opzioni[Number(b.dataset.i)]); }
+  };
+  const first = s.querySelector(".opt"); if (first) first.focus();
+}
+function chiudiFoglio() { const s = $("#sheet"); s.classList.remove("on"); s.innerHTML = ""; }
+
+function sceltaProfilo(pid, d) {
+  if (pid === "A") {
+    apriFoglio("Antonio, " + GIORNI[d].toLowerCase(), [
+      {v:"rest", t:"Riposo", on:S.agendaA[d] === "rest"},
+      {v:"corta", t:"Uscita corta o tennis", s:"Fino a 3 ore", on:S.agendaA[d] === "corta"},
+      {v:"lunga", t:"Uscita lunga", s:"3 ore e più", on:S.agendaA[d] === "lunga"}
+    ], o => { S.agendaA[d] = o.v; aggiorna(); toast("Porzioni di Antonio aggiornate"); });
+  } else if (pid === "V") {
+    apriFoglio("Vincenzo, " + GIORNI[d].toLowerCase(), [
+      {v:"rest", t:"Riposo", on:S.agendaV[d] === "rest"},
+      {v:"sport", t:"Sport", on:S.agendaV[d] === "sport"}
+    ], o => { S.agendaV[d] = o.v; aggiorna(); toast("Porzioni di Vincenzo aggiornate"); });
+  } else if (pid === "M") {
+    if (d === 0 || d === 5) { toast("Il " + GIORNI[d].toLowerCase() + " per Tina è sempre senza pasta e pane"); return; }
+    apriFoglio("Tina, " + GIORNI[d].toLowerCase(), [
+      {v:false, t:"Giorno medio", on:!S.mLow[d]},
+      {v:true, t:"Low carb, dopo uno sgarro", s:"Il giorno dopo uno sgarro", on:S.mLow[d]}
+    ], o => { S.mLow[d] = o.v; aggiorna(); toast("Porzioni di Tina aggiornate"); });
+  }
+}
+
+// ================== SWIPE ==================
+const SW = {coda:[], i:0, cand:[], ci:0, seed:1, fatti:0};
+function apriSwipe(coda) {
+  if (!coda.length) { toast("Sono già tutti scelti"); return; }
+  SW.coda = coda; SW.i = 0; SW.fatti = 0; SW.seed = (Date.now() % 997) + 1;
+  caricaCandidati();
+  $("#swipe").classList.add("on");
+  document.body.classList.add("bloccato");
+  renderSwipe();
+}
+function caricaCandidati() {
+  const s = SW.coda[SW.i]; if (!s) return;
+  SW.cand = candidati(s.pid, s.d, s.meal, SW.seed + SW.i * 3.7); SW.ci = 0;
+}
+function chiudiSwipe(silenzioso) { $("#swipe").classList.remove("on"); if (!silenzioso) { document.body.classList.remove("bloccato"); render(); } salva(); }
+function renderSwipe() {
+  const box = $("#swipe");
+  const s = SW.coda[SW.i];
+  if (!s) {
+    box.innerHTML = `<div class="sw-fine"><h2>Fatto</h2><p>${SW.fatti === 1 ? "Hai scelto 1 pasto." : "Hai scelto " + SW.fatti + " pasti."} Sono già nella lista della spesa.</p>
+      <button class="btn primary" data-sw="chiudi">Torna all'app</button></div>`;
+    return;
+  }
+  const c = SW.cand[SW.ci % SW.cand.length];
+  const p = persona(s.pid);
+  const settimana = s.meal !== "pranzo";
+  const avvisi = (c.avvisi || []).map(x => ({rossa:"carne rossa", bianca:"carne bianca", pesce:"pesce", legumi:"legumi", affettati:"affettati", pasta:"pasta", riso:"riso", cereali:"cereali"})[x]);
+  box.innerHTML = `<div class="sw-top"><button class="btn ghost small" data-sw="chiudi">Chiudi</button><span>${SW.i + 1} di ${SW.coda.length}</span></div>
+    <div class="sw-area"><article class="sw-card" id="swcard" style="--pc:${p.colore}" tabindex="-1">
+      <div class="sw-chi">${dot(s.pid, true)}<b>${esc(p.nome)}</b></div>
+      <p class="sw-quando">${GIORNI[s.d]} · ${PASTI_NOMI[s.meal]} · ${esc(nomeProfilo(s.pid, s.d))}</p>
+      <h2>${esc(c.res.titolo)}</h2>
+      ${c.res.fav === s.pid ? `<p class="fav">Uno dei suoi preferiti</p>` : ""}
+      <ul>${c.res.items.map(it => `<li>${esc(fmtItem(it))}</li>`).join("")}</ul>
+      ${avvisi.length ? `<p class="sw-avviso">Questa settimana c'è già abbastanza ${avvisi.join(" e ")}.</p>` : ""}
+      <div class="sw-stamp si" aria-hidden="true">Sì</div><div class="sw-stamp no" aria-hidden="true">Un'altra</div>
+    </article></div>
+    <div class="sw-btns"><button class="sw-b no" data-sw="no" aria-label="Fammi vedere un'altra proposta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Un'altra</span></button>
+    <button class="sw-b si" data-sw="si" aria-label="Sì, va bene"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Sì</span></button></div>
+    ${settimana ? `<button class="btn sw-tutta" data-sw="tutta">Sì, e uguale tutta la settimana</button>` : ""}
+    <button class="btn ghost sw-tutta" data-sw="mano">Compila tu questo pasto</button>`;
+  attivaTrascina($("#swcard"));
+}
+function swSi(tutta) {
+  const s = SW.coda[SW.i]; const c = SW.cand[SW.ci % SW.cand.length];
+  registraGusto(s.pid, s.meal, c.choice, c.res.items, 1);
+  if (tutta) {
+    for (let d = 0; d < 7; d++) if (slotAttivo(s.pid, d, s.meal)) { S.scelte[slotKey(s.pid, d, s.meal)] = JSON.parse(JSON.stringify(c.choice)); S.confermati[slotKey(s.pid, d, s.meal)] = true; }
+    const prima = SW.coda.length;
+    SW.coda = SW.coda.filter((x, j) => j <= SW.i || !(x.pid === s.pid && x.meal === s.meal));
+    SW.fatti += 1 + (prima - SW.coda.length);
+  } else { S.scelte[slotKey(s.pid, s.d, s.meal)] = c.choice; S.confermati[slotKey(s.pid, s.d, s.meal)] = true; SW.fatti++; }
+  salva();
+  SW.i++; caricaCandidati(); renderSwipe();
+}
+function swNo() {
+  const s = SW.coda[SW.i]; const c = SW.cand[SW.ci % SW.cand.length];
+  registraGusto(s.pid, s.meal, c.choice, c.res.items, -0.5);
+  SW.ci++;
+  if (SW.ci >= SW.cand.length) { SW.seed += 11; caricaCandidati(); }
+  renderSwipe();
+}
+function volaVia(card, dir, cb) {
+  const ridotto = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (ridotto || !card) { cb(); return; }
+  card.style.transition = "transform .28s ease-in, opacity .28s ease-in";
+  card.style.transform = `translateX(${dir * 120}%) rotate(${dir * 14}deg)`;
+  card.style.opacity = "0";
+  setTimeout(cb, 260);
+}
+function attivaTrascina(card) {
+  if (!card) return;
+  let x0 = null, dx = 0, id = null;
+  card.addEventListener("pointerdown", e => { x0 = e.clientX; dx = 0; id = e.pointerId; card.setPointerCapture(id); card.style.transition = "none"; });
+  card.addEventListener("pointermove", e => {
+    if (x0 === null) return;
+    dx = e.clientX - x0;
+    card.style.transform = `translateX(${dx}px) rotate(${dx / 18}deg)`;
+    card.classList.toggle("tira-si", dx > 40); card.classList.toggle("tira-no", dx < -40);
+  });
+  const fine = () => {
+    if (x0 === null) return; x0 = null;
+    if (dx > 90) volaVia(card, 1, () => swSi(false));
+    else if (dx < -90) volaVia(card, -1, swNo);
+    else { card.style.transition = "transform .2s"; card.style.transform = ""; card.classList.remove("tira-si", "tira-no"); }
+  };
+  card.addEventListener("pointerup", fine); card.addEventListener("pointercancel", fine);
+}
+
+// ================== EVENTI ==================
+function onClick(e) {
+  const b = e.target.closest("[data-act]");
+  if (!b || b.tagName === "INPUT") return;
+  const a = b.dataset.act, d = Number(b.dataset.d);
+  switch (a) {
+    case "giorno": ui.day = d; render(); break;
+    case "vai-giorno": ui.day = d; ui.tab = "oggi"; render(); window.scrollTo(0, 0); break;
+    case "cena-opt": S.cena[d] = b.dataset.v; aggiorna(); break;
+    case "satM": S.satM = b.dataset.v; aggiorna(); break;
+    case "profilo": sceltaProfilo(b.dataset.p, d); break;
+    case "swipe-uno": apriSwipe([{pid:b.dataset.p, d, meal:b.dataset.m}]); break;
+    case "componi": apriComponi(b.dataset.p, d, b.dataset.m); break;
+    case "swipe": { const coda = slotVuoti(b.dataset.f); apriSwipe(coda); break; }
+    case "auto": { const n = riempiAutomatico(); aggiorna(); toast(n ? (n === 1 ? "Scelto 1 pasto" : "Scelti " + n + " pasti") : "Era già tutto scelto"); break; }
+    case "ag": {
+      if (b.dataset.p === "A") { const ord = ["rest","corta","lunga"]; S.agendaA[d] = ord[(ord.indexOf(S.agendaA[d]) + 1) % 3]; }
+      else S.agendaV[d] = S.agendaV[d] === "rest" ? "sport" : "rest";
+      aggiorna(); break;
+    }
+    case "mlow": S.mLow[d] = !S.mLow[d]; aggiorna(); break;
+    case "nuova-settimana":
+      if (!confirm("Vuoi ricominciare? I pasti scelti e le spunte della spesa verranno cancellati.")) break;
+      S.scelte = {}; S.spesa.checked = {}; S.spesa.casa = {}; S.salta = {}; S.confermati = {};
+      S.mLow = [false,false,false,false,false,false,false];
+      S.week = isoDate(lunediDi(new Date())); ui.day = oggiIdx();
+      riempiAutomatico(); aggiorna(); toast("Nuova settimana pronta"); break;
+    case "range": S.spesa.range = b.dataset.v; aggiorna(); break;
+    case "check": { const k = b.dataset.k; S.spesa.checked[k] = !S.spesa.checked[k]; aggiorna(); break; }
+    case "casa": { const k = b.dataset.k; S.spesa.casa[k] = !S.spesa.casa[k]; if (!S.spesa.casa[k]) delete S.spesa.casa[k]; aggiorna(); break; }
+    case "reset-spunte": S.spesa.checked = {}; aggiorna(); break;
+    case "condividi": condividi(); break;
+    case "chip-cerca": ui.cercaQ = b.dataset.v; render(); break;
+    case "vai": {
+      const v = b.dataset.v;
+      if (ui.tab === v) ui.tab = ui.tabPrec || "oggi";
+      else { if (!["cerca","impostazioni"].includes(ui.tab)) ui.tabPrec = ui.tab; ui.tab = v; }
+      render(); window.scrollTo(0, 0); break;
+    }
+    case "salta": { S.salta[slotKey(b.dataset.p, d, b.dataset.m)] = true; aggiorna(); toast("Tolto dalla lista della spesa"); break; }
+    case "rimetti": { delete S.salta[slotKey(b.dataset.p, d, b.dataset.m)]; riempiAutomatico(); aggiorna(); break; }
+    case "sposta-sera": {
+      apriFoglio("Che cosa si mangia " + (d === oggiIdx() && settimanaCorrente() ? "stasera" : GIORNI[d].toLowerCase() + " sera"),
+        [0,1,2,3,4,5,6].map(s => ({v:s, t: nomeSeraTipo(s), s: "dal " + GIORNI[S.cal.indexOf(s)].toLowerCase(), on: seraDi(d) === s})),
+        o => { spostaSera(d, o.v); aggiorna(); toast("Cena spostata"); });
+      break;
+    }
+    case "extra-add": aggiungiExtra(); break;
+    case "extra-ok": { const i = Number(b.dataset.i); if (S.spesa.extra[i]) S.spesa.extra[i].ok = !S.spesa.extra[i].ok; aggiorna(); break; }
+    case "extra-via": { const i = Number(b.dataset.i); S.spesa.extra.splice(i, 1); aggiorna(); break; }
+    case "dieta-via": {
+      const id = b.dataset.id;
+      if (!S.diete[id] || !confirm("Vuoi togliere «" + S.diete[id].nome + "» e tornare alla dieta precedente?")) break;
+      delete S.diete[id]; applicaDiete(); riempiAutomatico(); aggiorna(); toast("Dieta rimossa"); break;
+    }
+    case "esporta": scaricaFile("a-tavola-dati.json", JSON.stringify({tipo:"backup-a-tavola", data: isoDate(new Date()), stato: S})); break;
+    case "ric": ui.ricSeg = b.dataset.v; render(); break;
+  }
+}
+async function condividi() {
+  const t = testoLista();
+  try { if (navigator.share) { await navigator.share({text: t}); return; } } catch (e) { if (e && e.name === "AbortError") return; }
+  try { await navigator.clipboard.writeText(t); toast("Lista copiata: incollala in WhatsApp"); }
+  catch (e) { window.open("https://wa.me/?text=" + encodeURIComponent(t), "_blank"); }
+}
+function nomeSeraTipo(s) {
+  const c = CENE[s];
+  if (c.pizza) return "Pizza con verdure";
+  if (s === 4 && S.cena[4] === "mozz") return "Serata mozzarella";
+  const k = (S.cena[s] && S.cena[s] !== "mozz") ? S.cena[s] : (c.prot === "domenica" ? CENA_DEFAULT[6] : c.prot);
+  return F[k] ? F[k][0] : "Cena";
+}
+function aggiungiExtra() {
+  const el = $("#extra-txt");
+  const v = el ? el.value.trim() : "";
+  if (!v) { if (el) el.focus(); return; }
+  S.spesa.extra.push({t: v, ok: false});
+  aggiorna();
+  const nuovo = $("#extra-txt");
+  if (nuovo) nuovo.focus();
+}
+function onChange(e) {
+  const t = e.target; const a = t.dataset.act;
+  if (a === "attivo") { S.attivi[t.dataset.p] = t.checked; aggiorna(); }
+  if (a === "import-dieta") { const f = t.files && t.files[0]; t.value = ""; if (f) leggiFileDieta(f); }
+  if (a === "q-on") { S.q.on = t.checked; aggiorna(); }
+  if (a === "maxdad") { S.maxDad = t.checked; aggiorna(); }
+  if (a === "q-nome") { S.q.nome = t.value.trim() || "5ª persona"; aggiorna(); }
+}
+
+function init() {
+  carica();
+  applicaDiete();
+  if (riempiAutomatico()) salva();
+  document.addEventListener("click", onClick);
+  document.addEventListener("toggle", e => { const t = e.target; if (t && t.classList && t.classList.contains("persona")) ui.aperti[t.dataset.pid] = t.open; }, true);
+  document.addEventListener("change", onChange);
+  document.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => { ui.tab = b.dataset.tab; render(); window.scrollTo(0, 0); }));
+  $("#componi").addEventListener("click", onComponi);
+  $("#swipe").addEventListener("click", e => {
+    const b = e.target.closest("[data-sw]"); if (!b) return;
+    const a = b.dataset.sw;
+    if (a === "chiudi") chiudiSwipe();
+    else if (a === "mano") { const s = SW.coda[SW.i]; if (s) apriComponi(s.pid, s.d, s.meal); }
+    else if (a === "si") volaVia($("#swcard"), 1, () => swSi(false));
+    else if (a === "no") volaVia($("#swcard"), -1, swNo);
+    else if (a === "tutta") swSi(true);
+  });
+  document.addEventListener("keydown", e => {
+    if ($("#swipe").classList.contains("on")) {
+      if (e.key === "ArrowRight") volaVia($("#swcard"), 1, () => swSi(false));
+      else if (e.key === "ArrowLeft") volaVia($("#swcard"), -1, swNo);
+      else if (e.key === "Escape") chiudiSwipe();
+    } else if ($("#componi").classList.contains("on")) { if (e.key === "Escape") chiudiComponi(); }
+    else if (e.key === "Enter" && e.target && e.target.id === "extra-txt") { e.preventDefault(); aggiungiExtra(); }
+    else if (e.key === "Escape") chiudiFoglio();
+  });
+  render();
+}
+if (typeof document !== "undefined") document.addEventListener("DOMContentLoaded", init);
+
+
+</script>
+</body>
+</html>
